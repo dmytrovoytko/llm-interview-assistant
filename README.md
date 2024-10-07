@@ -53,7 +53,7 @@ Sections used in search and help to focus on specific topics of the interview.
     - Docker and docker-compose for containerization
     - Elastic search to index interview questions-answers bank
     - OpenAI-compatible API, that supports working with Ollama locally, even without GPU
-        * Ollama tested with Microsoft Phi 3/3.5 model, performs better than Flan-T5, Gemma
+        * Ollama tested with Microsoft Phi 3/3.5 model, performs better than Google Flan-T5, Gemma 2
         * you can pull and test any model from [Ollama library](https://ollama.com/library)
         * with your own OPENAI_API_KEY you can choose gpt-3.5/gpt-4o
     - PostgreSQL to store asked questions, answers, evaluation (relevance) and user feedback
@@ -77,4 +77,23 @@ Sections used in search and help to focus on specific topics of the interview.
 6. If you want to use gpt-3.5/gpt-4 API you need to correct OPENAI_API_KEY in `.env` file, which contains all configuration settings. 
 7. By default instructions (below) scripts will load Ollama/phi3.5 model. If you want to use also Ollama/phi3 uncomment a line in `ollama_pull.sh`. Similarly you can load other Ollama models.
 
+### :arrow_forward: Start the app
 
+1. Run `bash deploy.sh` to start all containers, including elasticsearch, ollama, postgres, streamlit, grafana. It takes at least couple of minutes to download/build corresponding images, then get all services ready to serve. So you can make yourself some tea/coffee meanwhile. When the new log messages stop appering, press enter to return to a command line. 
+![docker-compose up](/screenshots/docker-compose.png)
+
+2. Run `bash init_db_es.sh` 
+* to create PostgreSQL tables:
+![init_db](/screenshots/init_db.png)
+
+* to ingest and index question database.
+![init_es](/screenshots/init_es.png)
+
+3. Run `bash ollama_pull.sh` to pull phi3/phi3.5 Ollama models.
+![Ollama pull](/screenshots/ollama_pulled.png)
+
+If you want to use other models, you can modify this script accordingly, then update `app.py` to add your model names.
+
+5. Finally, open streamlit app: switch to ports tab and click on link with port 8501 (🌐 icon).
+
+![Ports streamlit open](/screenshots/streamlit-open.png)

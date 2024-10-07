@@ -75,7 +75,7 @@ Sections used in search and help to focus on specific topics of the interview.
 5. **Go to the app directory** `cd interview_assistant`
 6. If you want to develop the project locally, you can run `pip install -r requirements.txt` (project tested on python 3.11/3.12).
 6. **If you want to use gpt-3.5/gpt-4 API you need to correct OPENAI_API_KEY in `.env` file**, which contains all configuration settings. 
-7. By default instructions (below) scripts will load Ollama/phi3.5 model. If you want to use also Ollama/phi3 uncomment a line in `ollama_pull.sh`. Similarly you can load other Ollama models.
+7. By default instructions (below) scripts will load Ollama/phi3.5 model. If you want to use also Ollama/phi3 or Ollama/qwen2.5:3b uncomment a line in `ollama_pull.sh`. Similarly you can load other Ollama models.
 
 ### :arrow_forward: Start the app
 

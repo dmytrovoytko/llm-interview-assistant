@@ -1,0 +1,530 @@
+id,question,text,position,section
+mle0001,What is Semi-supervised Machine Learning?,"Semi-supervised learning is the blend of supervised and unsupervised learning. The algorithm is trained on a mix of labeled and unlabeled data. Generally, it is utilized when we have a very small labeled dataset and a large unlabeled dataset.
+In simple terms, the unsupervised algorithm is used to create clusters and by using existing labeled data to label the rest of the unlabelled data. A Semi-supervised algorithm assumes continuity assumption, cluster assumption, and manifold assumption.
+It is generally used to save the cost of acquiring labeled data. For example, protein sequence classification, automatic speech recognition, and self-driving cars.",mle,Basic Machine Learning Interview Questions
+mle0002,How do you choose which algorithm to use for a dataset?,"Apart from the dataset, you need a business use case or application requirements. You can apply supervised and unsupervised learning to the same data.
+Generally:
+Supervised learning algorithms require labeled data.
+Regression algorithms require continuous numerical targets
+Classification algorithms require categorical targets
+Unsupervised learning algorithms require unlabeled data.
+Semi-supervised learning requires the combination of labeled and unlabeled datasets.
+Reinforcement learning algorithms require environment, agent, state, and reward data.",mle,Basic Machine Learning Interview Questions
+mle0003,Explain the K Nearest Neighbor Algorithm,"The K Nearest Neighbor (KNN) is a supervised learning classifier. It uses proximity to classify labels or predict the grouping of individual data points. We can use it for regression and classification. KNN algorithm is non-parametric, meaning it doesn't make an underlying assumption of data distribution.
+In the KNN classifier:
+We find K-neighbors nearest to the white point. In the example below, we chose k=5.
+To find the five nearest neighbors, we calculate the euclidean distance between the white point and the others. Then, we chose the 5 points closest to the white point.
+There are three red and two green points at K=5. Since the red has a majority, we assign a red label to it.",mle,Basic Machine Learning Interview Questions
+mle0004,"What is Feature Importance in machine learning, and how do you determine it?","Feature importance refers to techniques that assign a score to input features based on how useful they are at predicting a target variable. It plays a critical role in understanding the data's underlying structure, the behavior of the model, and making the model more interpretable.
+There are several methods to determine feature importance:
+Model-based Importance: Certain algorithms like Decision Trees and Random Forests provide built-in methods to evaluate feature importance. For example, Random Forests calculate the decrease in node impurity weighted by the probability of reaching that node, averaged over all trees.
+Permutation Importance: This involves shuffling individual variables in the validation set and observing the effect on model performance. A significant decrease in model performance indicates high importance.
+SHAP (SHapley Additive exPlanations): This approach uses game theory to measure the contribution of each feature to the prediction in a complex model. SHAP values provide a deep insight into the model's behavior and are particularly useful for complex models like gradient boosting machines or neural networks.
+Correlation Coefficients: Simple statistical measures like Pearson or Spearman correlation can provide insights into the linear relationship between each feature and the target variable.
+Understanding feature importance is crucial for model optimization, reducing overfitting by removing non-informative features, and improving model interpretability, especially in domains where understanding the model's decision process is critical.",mle,Technical Machine Learning Interview Questions
+mle0005,Is it true that we need to scale our feature values when they vary greatly?,"Yes. Most of the algorithms use Euclidean distance between data points, and if the feature value varies greatly, the results will be quite different. In most cases, outliers cause machine learning models to perform worse on the test dataset.
+We also use feature scaling to reduce convergence time. It will take longer for gradient descent to reach local minima when features are not normalized.",mle,Technical Machine Learning Interview Questions
+mle0006,The model you have trained has a low bias and high variance. How would you deal with it?,"Low bias occurs when the model is predicting values close to the actual value. It is mimicking the training dataset. The model has no generalization which means if the model is tested on unseen data, it will give poor results.
+To fix these issues, we will use bagging algorithms as it divides a data set into subsets using randomized sampling. Then, we generate sets of models using these samples with a single algorithm. After that, we combine the model prediction using voting classification or averaging.
+For high variance, we can use regularization techniques. It penalized higher model coefficients to lower model complexity. Furthermore, we can select the top features from the feature importance graph and train the model.",mle,Technical Machine Learning Interview Questions
+mle0007,Which cross-validation technique would you suggest for a time-series dataset and why?,"Cross-validation is used to evaluate model performance robustly and prevent overfitting. Generally, cross-validation techniques randomly pick samples from the data and split them into train and test data sets. The number of splits is based on the K value.
+For example, if the K = 5, there will be four folds for the train and one for the test. It will repeat five times to measure the model performed on separate folds.
+We cannot do it with a time series dataset because it doesn't make sense to use the value from the future to forecast the value of the past. There is a temporal dependency between observations, and we can only split the data in one direction so that the values of the test dataset are after the training set.
+The diagram shows that time series data k fold split is unidirectional. The blue points are the training set, the red point is the test set, and the white is unused data. As we can observe with every iteration, we are moving forward with the training set while the test set remains in front of the training set, not randomly selected.",mle,Computer Vision Engineering Interview Questions
+mle0008,Why can the inputs in computer vision problems get huge? Explain it with an example,"Imagine an image of 250 X 250 and a fully connected hidden first layer with 1000 hidden units. For this image, the input features are 250 X 250 X 3 = 187,500, and the weight matrix at the first hidden layer will be 187,500 X 1000 dimensional matrix. These numbers are huge for storage and computation, and to combat this problem, we use convolution operations.
+Learn image processing by taking a short Image Processing in Python course",mle,Computer Vision Engineering Interview Questions
+mle0009,"When you have a small dataset, suggest a way to train a convolutional neural network","If you do not have enough data to train a convolutional neural network, you can use transfer learning to train your model and get state-of-the-art results. You need a pre-trained model which was trained on a general but larger dataset. After that, you will fine-tune it on newer data by training the last layers of the models.
+Transfer learning allows data scientists to train models on smaller data by using fewer resources, computing, and storage. You can find open-source pre-trained models for various use cases easily, and most of them have a commercial license which means you can use them to create your application.",mle,Computer Vision Engineering Interview Questions
+mle0010,What is the state-of-the-art object detection algorithm YOLO?,"YOLO is an object detection algorithm based on convolutional neural networks, and it can provide real-time results. The YOLO algorithm requires a single forward pass through CNN to recognize the object. It predicts both various class probabilities and boundary boxes.
+The model was trained to detect various objects, and companies are using transfer learning to fine-tune it on new data for modern applications such as autonomous driving, wildlife preservation, and security.",mle,NLP Engineering Interview Questions
+mle0011,What is Syntactic Analysis?,"Syntactic Analysis, also known as Syntax analysis or Parsing, is a text analysis that tells us the logical meaning behind the sentence or part of the sentence. It focuses on the relationship between words and the grammatical structure of sentences. You can also say that it is the processing of analyzing the natural language by using grammatical rules.",mle,NLP Engineering Interview Questions
+mle0012,What are Stemming and Lemmatization?,"Stemming and lemmatization is a normalizing technique used to minimize the structural variation of words in a sentence.
+Stemming removes the affixes added to the word and leaves it in base form. For example, Changing to Chang.
+It is widely used by search engines for storage optimization. Instead of storing all the forms of the words, it only stores the stems.
+Lemmatization converts the word into its lemma form. The output is the root word instead of the stem word. After lemmatization, we get the valid word that means something. For example, Changing to Change.",mle,NLP Engineering Interview Questions
+mle0013,How would you reduce the inference time of a trained transformer model?,"It is the responsibility of machine learning engineers to optimize the model inference. Due to large language models, it has become more difficult to deploy models in production and reduce inference time to microseconds.
+To improve inference time, we can use:
+GPU, TPU, or FPGA for acceleration.
+GPU with fp16 support
+Pruning to reduce parameters
+Knowledge distillation
+Hierarchical softmax or adaptive softmax
+Cache predictions
+Parallel/batch computing
+Reduce the model size",mle,Reinforcement Learning Engineering Interview Questions
+mle0014,What are the steps involved in a typical Reinforcement Learning algorithm?,"Reinforcement learning uses trial and error to reach goals. It is a goal-oriented algorithm and it learns from the environment by taking correct steps to maximize the cumulative reward.
+In typical reinforcement learning:
+At the start, the agent receives state zero from the environment
+Based on the state, the agent will take an action
+The state has changed, and the agent is at a new place in the environment.
+The agent receives the reward if it has made the correct move.
+The process will repeat until the agent has learned the best possible path to reach the goal by maximizing the cumulative rewards.",mle,Reinforcement Learning Engineering Interview Questions
+mle0015,What is the difference between Off-Policy and On-Policy Learning?,"On-Policy learning algorithms evaluate and improve the same policy to act and update it. In other words, the policy that is used for updating and the policy that is used to take action are the same.
+Target Policy == Behavior Policy
+On-policy algorithms are Sarsa, Monte Carlo for On-Policy, Value Iteration, and Policy Iteration
+Off-Policy Learning algorithms are completely different as the updated policy is different from the behavior policy. For example, in Q-learning, the agent learns from an optimal policy with the help of a greedy policy and takes action using other policies.",mle,Reinforcement Learning Engineering Interview Questions
+mle0016,Why do we need “Deep” Q learning?,"Simple Q learning is great. It solves the problem on a smaller scale, but on a larger scale, it fails.
+Imagine if the environment has 1000 states and 1000 actions per state. We will require a Q table of millions of cells. The game of chess and Go will require an even bigger table. This is where Deep Q-learning comes for the rescue.
+It utilizes a neural network to approximate the Q value function. The neural networks recipe states as an input and outputs the Q-value of all possible actions.",mle,Amazon Machine Learning Interview Questions
+mle0017,What is the interpretation of a ROC area under the curve?,"Receiver operating characteristics (ROC) shows the trade-off between sensitivity and specificity.
+Sensitivity: it is the probability that the model predicts a positive outcome when the actual value is also positive.
+Specificity: it is the probability that the model predicts a negative outcome when the actual value is also negative.
+The curve is plotted using the False positive rate (FP/(TN + FP)) and true positive rate (TP/(TP + FN))
+The area under the curve (AUC) shows the model performance. If the area under the ROC curve is 0.5, then our model is completely random. The model with AUC close to 1 is the better model.",mle,Amazon Machine Learning Interview Questions
+mle0018,What are the methods of reducing dimensionality?,"For dimensionality reduction, we can use feature selection or feature extraction methods.
+Feature selection is a process of selecting optimal features and dropping irrelevant features. We use Filter, Wrapper, and Embedded methods to analyze feature importance and remove less important features to improve model performance.
+Feature extraction transforms the space with multiple dimensions into fewer dimensions. No information is lost during the process, and it uses fewer resources to process the data. The most common extraction techniques are Linear discriminant analysis (LDA), Kernel PCA, and Quadratic discriminant analysis.",mle,Amazon Machine Learning Interview Questions
+mle0019,How do you find thresholds for a classifier?,"In the case of a spam classifier, a logistics regression model will return the probability. We either use the probability of 0.8999 or convert it into class (Spam/Not Spam) using a threshold.
+Usually, the threshold of a classifier is 0.5, but in some cases, we need to fine-tune it to improve the accuracy. The 0.5 threshold means that if the probability is equal to or above 0.5, it is spam, and if it is lower, then it is not spam.
+To find the threshold, we can use Precision-Recall curves and ROC curves, grid search, and by manually changing the value to get a better CV.",mle,Google Machine Learning Interview Questions
+mle0020,What are the assumptions of linear regression?,"Linear regression is used to understand the relation between features (X) and target (y). Before we train the model, we need to meet a few assumptions:
+The residuals are independent
+There is a linear relation between X independent variable and y dependent variable.
+Constant residual variance at every level of X
+The residuals are normally distributed.
+Note: the residuals in linear regression are the difference between actual and predicted values.",mle,Google Machine Learning Interview Questions
+mle0021,Write a function find_bigrams to take a string and return a list of all bigrams,"During coding interviews, you will be asked about machine learning problems, but in some cases, they will assess your Python skills by asking you general coding questions. Become an expert Python programmer by taking the Python Programmer career track.
+Creating a bigram function is quite easy. You need to use two loops with the zip function.
+In bigram function, we are taking a list of the sentence as an input
+Creating a loop to access a single sentence
+Lowering and splitting the sentence into a list of words
+Using zip to create a combination of the previous word and the next word
+Appending the output to the result
+Printing the results.
+It is quite easy if you break down the problem and use zip functions.
+def bigram(text_list:list):
+result = []
+for ls in text_list:
+words = ls.lower().split()
+for bi in zip(words, words[1:]):
+result.append(bi)
+return result
+text = [""Data drives everything"", ""Get the skills you need for the future of work""]
+print(bigram(text))
+Results:
+[('Data', 'drives'), ('drives', 'everything'), ('Get', 'the'), ('the', 'skills'), ('skills', 'you'), ('you', 'need'), ('need', 'for'), ('for', 'the'), ('the', 'future'), ('future', 'of'), ('of', 'work')]",mle,Google Machine Learning Interview Questions
+mle0022,What is the activation function in Machine Learning?,"The activation function is a non-linear transformation in neural networks. We pass the input through the activation function before passing it to the next layer.
+The net input value can be anything between -inf to +inf, and the neuron doesn't know how to bound the values, thus unable to decide the firing pattern. The activation function decides whether a neuron should be activated or not to bound the net input values.
+Most common types of Activation Functions:
+Step Function
+Sigmoid Function
+ReLU
+Leaky ReLU",mle,Meta Machine Learning Interview Questions
+mle0023,How would you build a restaurant recommendation on Facebook?,"The answer is completely up to you. But before answering, you need to consider what business goal you want to achieve to set a performance metric and how you are going to acquire the data.
+In a typical machine learning system design, we:
+Collect, clean, and analyze the data.
+Perform feature engineering
+Select a methodology, algorithm, or machine learning model
+Train and evaluate the performance on test and validation datasets.
+Streamline the processes and deploy the model in production.
+You need to make sure you are focusing on design rather than theory or model architecture. Make sure to talk about model inference and how improving it will increase the overall revenues.
+Also, give an overview of why you selected a certain methodology over the other.",mle,Meta Machine Learning Interview Questions
+mle0024,"Given two strings A and B, write a function can_shift to return whether or not, A can be shifted some number of places to get B","Solving coding challenges and working on your Python skills will improve your chance of getting past the coding interview stage.
+Before jumping into solving a problem, you need to understand the question. You simply need to create a boolean function that will return True if by shifting the alphabets in String B, you get String A.
+A = 'abid'
+B = 'bida'
+can_shift(A, B) == True
+Return false if the length of the string is not similar.
+Loop around the range of length of String A
+Create mut_a to create various combinations of characters using the String A
+During the loop, if mut_a is equal to String B returns True, else returns false.
+def can_shift(a, b):
+if len(a) != len(b):
+return False
+for i in range(len(a)):
+mut_a = a[i:] + a[:i]
+if mut_a == b:
+return True
+return False
+A = 'abid'
+B = 'bida'
+print(can_shift(A, B))
+>>> True",mle,Meta Machine Learning Interview Questions
+mle0025,What is Ensemble learning?,"Ensemble learning is used to combine the insights of multiple machine learning models to improve the accuracy and performance metrics.
+Simple ensemble methods:
+Mean/average: we average the predictions from multiple high-performing models.
+Weighted average: we assign different weights to machine learning models based on the performance and then combine them.
+Advance ensemble methods:
+Bagging is used to minimize variance errors. It randomly creates the subset of training data and trains it on the models. The combination of models reduces the variance and makes it more reliable compared to a single model.
+Boosting is used to reduce bias errors and produce superior predictive models. It is an iterative ensemble technique that adjusts the weights based on the last classification. Boosting algorithms give more weight to observations that the previous model predicted inaccurately.",mle,Meta Machine Learning Interview Questions
+mle0026,What's the trade-off between bias and variance?,If our model is too simple and has very few parameters then it may have high bias and low variance. On the other hand if our model has large number of parameters then it’s going to have high variance and low bias. So we need to find the right/good balance without overfitting and underfitting the data.,mle,Technical Machine Learning Interview Questions
+mle0027,What is gradient descent?,"Gradient descent is an optimization algorithm used to find the values of parameters (coefficients) of a function (f) that minimizes a cost function (cost).
+Gradient descent is best used when the parameters cannot be calculated analytically (e.g. using linear algebra) and must be searched for by an optimization algorithm.",mle,Technical Machine Learning Interview Questions
+mle0028,Explain over- and under-fitting and how to combat them?,"ML/DL models essentially learn a relationship between its given inputs(called training features) and objective outputs(called labels). Regardless of the quality of the learned relation(function), its performance on a test set(a collection of data different from the training input) is subject to investigation.
+Most ML/DL models have trainable parameters which will be learned to build that input-output relationship. Based on the number of parameters each model has, they can be sorted into more flexible(more parameters) to less flexible(less parameters).
+The problem of Underfitting arises when the flexibility of a model(its number of parameters) is not adequate to capture the underlying pattern in a training dataset. Overfitting, on the other hand, arises when the model is too flexible to the underlying pattern. In the later case it is said that the model has “memorized” the training data.
+An example of underfitting is estimating a second order polynomial(quadratic function) with a first order polynomial(a simple line). Similarly, estimating a line with a 10th order polynomial would be an example of overfitting.",mle,Technical Machine Learning Interview Questions
+mle0029,How do you combat the curse of dimensionality?,"Feature Selection(manual or via statistical methods)
+Principal Component Analysis (PCA)
+Multidimensional Scaling
+Locally linear embedding",mle,Technical Machine Learning Interview Questions
+mle0030,"What is regularization, why do we use it, and give some examples of common methods?","A technique that discourages learning a more complex or flexible model, so as to avoid the risk of overfitting. Examples
+Ridge (L2 norm)
+Lasso (L1 norm)
+The obvious disadvantage of ridge regression, is model interpretability. It will shrink the coefficients for least important predictors, very close to zero. But it will never make them exactly zero. In other words, the final model will include all predictors. However, in the case of the lasso, the L1 penalty has the effect of forcing some of the coefficient estimates to be exactly equal to zero when the tuning parameter λ is sufficiently large. Therefore, the lasso method also performs variable selection and is said to yield sparse models.",mle,Technical Machine Learning Interview Questions
+mle0031,Explain Principal Component Analysis (PCA)?,"Principal Component Analysis (PCA) is a dimensionality reduction technique used in machine learning to reduce the number of features in a dataset while retaining as much information as possible. It works by identifying the directions (principal components) in which the data varies the most, and projecting the data onto a lower-dimensional subspace along these directions.",mle,Technical Machine Learning Interview Questions
+mle0032,Why is ReLU better and more often used than Sigmoid in Neural Networks?,"Computation Efficiency: As ReLU is a simple threshold the forward and backward path will be faster.
+Reduced Likelihood of Vanishing Gradient: Gradient of ReLU is 1 for positive values and 0 for negative values while Sigmoid activation saturates (gradients close to 0) quickly with slightly higher or lower inputs leading to vanishing gradients.
+Sparsity: Sparsity happens when the input of ReLU is negative. This means fewer neurons are firing ( sparse activation ) and the network is lighter.",mle,Technical Machine Learning Interview Questions
+mle0033,"Given stride S and kernel sizes for each layer of a (1-dimensional) CNN, create a function to compute the receptive field of a particular node in the network. This is just finding how many input nodes actually connect through to a neuron in a CNN","The receptive field are defined portion of space within an inputs that will be used during an operation to generate an output.
+Considering a CNN filter of size k, the receptive field of a peculiar layer is only the number of input used by the filter, in this case k, multiplied by the dimension of the input that is not being reduced by the convolutionnal filter a. This results in a receptive field of k*a.
+More visually, in the case of an image of size 32x32x3, with a CNN with a filter size of 5x5, the corresponding recpetive field will be the the filter size, 5 multiplied by the depth of the input volume (the RGB colors) which is the color dimensio. This thus gives us a recpetive field of dimension 5x5x3.",mle,Technical Machine Learning Interview Questions
+mle0037,How would you remove outliers when trying to estimate a flat plane from noisy samples?,"Random sample consensus (RANSAC) is an iterative method to estimate parameters of a mathematical model from a set of observed data that contains outliers, when outliers are to be accorded no influence on the values of the estimates.",mle,Technical Machine Learning Interview Questions
+mle0038,How does CBIR work?,"[Answer] Content-based image retrieval is the concept of using images to gather metadata on their content. Compared to the current image retrieval approach based on the keywords associated to the images, this technique generates its metadata from computer vision techniques to extract the relevant informations that will be used during the querying step. Many approach are possible from feature detection to retrieve keywords to the usage of CNN to extract dense features that will be associated to a known distribution of keywords.
+With this last approach, we care less about what is shown on the image but more about the similarity between the metadata generated by a known image and a list of known label and or tags projected into this metadata space.",mle,Technical Machine Learning Interview Questions
+mle0040,Describe how convolution works. What about if your inputs are grayscale vs RGB imagery? What determines the shape of the next layer?[src],"In a convolutional neural network (CNN), the convolution operation is applied to the input image using a small matrix called a kernel or filter. The kernel slides over the image in small steps, called strides, and performs element-wise multiplications with the corresponding elements of the image and then sums up the results. The output of this operation is called a feature map.
+When the input is RGB(or more than 3 channels) the sliding window will be a sliding cube. The shape of the next layer is determined by Kernel size, number of kernels, stride, padding, and dialation.",mle,Technical Machine Learning Interview Questions
+mle0041,Talk me through how you would create a 3D model of an object from imagery and depth sensor measurements taken at all angles around the object,"There are two popular methods for 3D reconstruction:
+Structure from Motion (SfM)
+Multi-View Stereo (MVS)
+SfM is better suited for creating models of large scenes while MVS is better suited for creating models of small objects.",mle,Technical Machine Learning Interview Questions
+mle0042,"Implement SQRT(const double & x) without using any special functions, just fundamental arithmetic",The taylor series can be used for this step by providing an approximation of sqrt(x):,mle,Technical Machine Learning Interview Questions
+mle0043,Reverse a bitstring,"If you are using python3:
+data = b'\xAD\xDE\xDE\xC0'
+my_data = bytearray(data)
+my_data.reverse()",mle,Technical Machine Learning Interview Questions
+mle0044,Implement non maximal suppression as efficiently as you can,"Non-Maximum Suppression (NMS) is a technique used to eliminate multiple detections of the same object in a given image. To solve that first sort bounding boxes based on their scores(N LogN). Starting with the box with the highest score, remove boxes whose overlapping metric(IoU) is greater than a certain threshold.(N^2)
+To optimize this solution you can use special data structures to query for overlapping boxes such as R-tree or KD-tree. (N LogN)",mle,Technical Machine Learning Interview Questions
+mle0046,What is data normalization and why do we need it?,"Data normalization is very important preprocessing step, used to rescale values to fit in a specific range to assure better convergence during backpropagation. In general, it boils down to subtracting the mean of each data point and dividing by its standard deviation. If we don't do this then some of the features (those with high magnitude) will be weighted more in the cost function (if a higher-magnitude feature changes by 1%, then that change is pretty big, but for smaller features it's quite insignificant). The data normalization makes all features weighted equally.",mle,Technical Machine Learning Interview Questions
+mle0047,Why do we use convolutions for images rather than just FC layers?,"Firstly, convolutions preserve, encode, and actually use the spatial information from the image. If we used only FC layers we would have no relative spatial information. Secondly, Convolutional Neural Networks (CNNs) have a partially built-in translation in-variance, since each convolution kernel acts as it's own filter/feature detector.",mle,Technical Machine Learning Interview Questions
+mle0048,What makes CNNs translation invariant?,"As explained above, each convolution kernel acts as it's own filter/feature detector. So let's say you're doing object detection, it doesn't matter where in the image the object is since we're going to apply the convolution in a sliding window fashion across the entire image anyways.",mle,Technical Machine Learning Interview Questions
+mle0049,Why do we have max-pooling in classification CNNs?,for a role in Computer Vision. Max-pooling in a CNN allows you to reduce computation since your feature maps are smaller after the pooling. You don't lose too much semantic information since you're taking the maximum activation. There's also a theory that max-pooling contributes a bit to giving CNNs more translation in-variance. Check out this great video from Andrew Ng on the benefits of max-pooling.,mle,Technical Machine Learning Interview Questions
+mle0050,Why do segmentation CNNs typically have an encoder-decoder style / structure?,"The encoder CNN can basically be thought of as a feature extraction network, while the decoder uses that information to predict the image segments by ""decoding"" the features and upscaling to the original image size.",mle,Technical Machine Learning Interview Questions
+mle0051,What is the significance of Residual Networks?,"The main thing that residual connections did was allow for direct feature access from previous layers. This makes information propagation throughout the network much easier. One very interesting paper about this shows how using local skip connections gives the network a type of ensemble multi-path structure, giving features multiple paths to propagate throughout the network.",mle,Technical Machine Learning Interview Questions
+mle0052,What is batch normalization and why does it work?,"Training Deep Neural Networks is complicated by the fact that the distribution of each layer's inputs changes during training, as the parameters of the previous layers change. The idea is then to normalize the inputs of each layer in such a way that they have a mean output activation of zero and standard deviation of one. This is done for each individual mini-batch at each layer i.e compute the mean and variance of that mini-batch alone, then normalize. This is analogous to how the inputs to networks are standardized. How does this help? We know that normalizing the inputs to a network helps it learn. But a network is just a series of layers, where the output of one layer becomes the input to the next. That means we can think of any layer in a neural network as the first layer of a smaller subsequent network. Thought of as a series of neural networks feeding into each other, we normalize the output of one layer before applying the activation function, and then feed it into the following layer (sub-network).",mle,Technical Machine Learning Interview Questions
+mle0053,Why would you use many small convolutional kernels such as 3x3 rather than a few large ones?,"This is very well explained in the VGGNet paper. There are 2 reasons: First, you can use several smaller kernels rather than few large ones to get the same receptive field and capture more spatial context, but with the smaller kernels you are using less parameters and computations. Secondly, because with smaller kernels you will be using more filters, you'll be able to use more activation functions and thus have a more discriminative mapping function being learned by your CNN.",mle,Technical Machine Learning Interview Questions
+mle0054,Why do we need a validation set and test set? What is the difference between them?,"When training a model, we divide the available data into three separate sets:
+The training dataset is used for fitting the model’s parameters. However, the accuracy that we achieve on the training set is not reliable for predicting if the model will be accurate on new samples.
+The validation dataset is used to measure how well the model does on examples that weren’t part of the training dataset. The metrics computed on the validation data can be used to tune the hyperparameters of the model. However, every time we evaluate the validation data and we make decisions based on those scores, we are leaking information from the validation data into our model. The more evaluations, the more information is leaked. So we can end up overfitting to the validation data, and once again the validation score won’t be reliable for predicting the behaviour of the model in the real world.
+The test dataset is used to measure how well the model does on previously unseen examples. It should only be used once we have tuned the parameters using the validation set.
+So if we omit the test set and only use a validation set, the validation score won’t be a good estimate of the generalization of the model.",mle,Technical Machine Learning Interview Questions
+mle0055,What is stratified cross-validation and when should we use it?,"Cross-validation is a technique for dividing data between training and validation sets. On typical cross-validation this split is done randomly. But in stratified cross-validation, the split preserves the ratio of the categories on both the training and validation datasets.
+For example, if we have a dataset with 10% of category A and 90% of category B, and we use stratified cross-validation, we will have the same proportions in training and validation. In contrast, if we use simple cross-validation, in the worst case we may find that there are no samples of category A in the validation set.
+Stratified cross-validation may be applied in the following scenarios:
+On a dataset with multiple categories. The smaller the dataset and the more imbalanced the categories, the more important it will be to use stratified cross-validation.
+On a dataset with data of different distributions. For example, in a dataset for autonomous driving, we may have images taken during the day and at night. If we do not ensure that both types are present in training and validation, we will have generalization problems.",mle,Technical Machine Learning Interview Questions
+mle0056,Why do ensembles typically have higher scores than individual models?,"An ensemble is the combination of multiple models to create a single prediction. The key idea for making better predictions is that the models should make different errors. That way the errors of one model will be compensated by the right guesses of the other models and thus the score of the ensemble will be higher.
+We need diverse models for creating an ensemble. Diversity can be achieved by:
+Using different ML algorithms. For example, you can combine logistic regression, k-nearest neighbors, and decision trees.
+Using different subsets of the data for training. This is called bagging.
+Giving a different weight to each of the samples of the training set. If this is done iteratively, weighting the samples according to the errors of the ensemble, it’s called boosting. Many winning solutions to data science competitions are ensembles. However, in real-life machine learning projects, engineers need to find a balance between execution time and accuracy.",mle,Technical Machine Learning Interview Questions
+mle0057,What is an imbalanced dataset? Can you list some ways to deal with it?,"An imbalanced dataset is one that has different proportions of target categories. For example, a dataset with medical images where we have to detect some illness will typically have many more negative samples than positive samples—say, 98% of images are without the illness and 2% of images are with the illness.
+There are different options to deal with imbalanced datasets:
+Oversampling or undersampling. Instead of sampling with a uniform distribution from the training dataset, we can use other distributions so the model sees a more balanced dataset.
+Data augmentation. We can add data in the less frequent categories by modifying existing data in a controlled way. In the example dataset, we could flip the images with illnesses, or add noise to copies of the images in such a way that the illness remains visible.
+Using appropriate metrics. In the example dataset, if we had a model that always made negative predictions, it would achieve a precision of 98%. There are other metrics such as precision, recall, and F-score that describe the accuracy of the model better when using an imbalanced dataset.",mle,Technical Machine Learning Interview Questions
+mle0058,"Can you explain the differences between supervised, unsupervised, and reinforcement learning?","In supervised learning, we train a model to learn the relationship between input data and output data. We need to have labeled data to be able to do supervised learning.
+With unsupervised learning, we only have unlabeled data. The model learns a representation of the data. Unsupervised learning is frequently used to initialize the parameters of the model when we have a lot of unlabeled data and a small fraction of labeled data. We first train an unsupervised model and, after that, we use the weights of the model to train a supervised model.
+In reinforcement learning, the model has some input data and a reward depending on the output of the model. The model learns a policy that maximizes the reward. Reinforcement learning has been applied successfully to strategic games such as Go and even classic Atari video games.",mle,Technical Machine Learning Interview Questions
+mle0059,What is data augmentation? Can you give some examples?,"Data augmentation is a technique for synthesizing new data by modifying existing data in such a way that the target is not changed, or it is changed in a known way.
+Computer vision is one of fields where data augmentation is very useful. There are many modifications that we can do to images:
+Resize
+Horizontal or vertical flip
+Rotate
+Add noise
+Deform
+Modify colors Each problem needs a customized data augmentation pipeline. For example, on OCR, doing flips will change the text and won’t be beneficial; however, resizes and small rotations may help.",mle,Technical Machine Learning Interview Questions
+mle0060,What is Turing test?,"The Turing test is a method to test the machine’s ability to match the human level intelligence. A machine is used to challenge the human intelligence that when it passes the test, it is considered as intelligent. Yet a machine could be viewed as intelligent without sufficiently knowing about people to mimic a human.",mle,Technical Machine Learning Interview Questions
+mle0061,What is Precision?,"Precision (also called positive predictive value) is the fraction of relevant instances among the retrieved instances
+Precision = true positive / (true positive + false positive)",mle,Technical Machine Learning Interview Questions
+mle0062,What is Recall?,Recall (also known as sensitivity) is the fraction of relevant instances that have been retrieved over the total amount of relevant instances. Recall = true positive / (true positive + false negative),mle,Technical Machine Learning Interview Questions
+mle0063,Define F1-score,"It is the weighted average of precision and recall. It considers both false positive and false negative into account. It is used to measure the model’s performance.
+F1-Score = 2 * (precision * recall) / (precision + recall)",mle,Technical Machine Learning Interview Questions
+mle0064,What is cost function?,"Cost function is a scalar functions which Quantifies the error factor of the Neural Network. Lower the cost function better the Neural network. Eg: MNIST Data set to classify the image, input image is digit 2 and the Neural network wrongly predicts it to be 3",mle,Technical Machine Learning Interview Questions
+mle0065,List different activation neurons or functions,"Linear Neuron
+Binary Threshold Neuron
+Stochastic Binary Neuron
+Sigmoid Neuron
+Tanh function
+Rectified Linear Unit (ReLU)",mle,Technical Machine Learning Interview Questions
+mle0066,Define Learning Rate,Learning rate is a hyper-parameter that controls how much we are adjusting the weights of our network with respect the loss gradient.,mle,Technical Machine Learning Interview Questions
+mle0067,What is Momentum (w.r.t NN optimization)?,"Momentum lets the optimization algorithm remembers its last step, and adds some proportion of it to the current step. This way, even if the algorithm is stuck in a flat region, or a small local minimum, it can get out and continue towards the true minimum.",mle,Technical Machine Learning Interview Questions
+mle0068,What is the difference between Batch Gradient Descent and Stochastic Gradient Descent?,"Batch gradient descent computes the gradient using the whole dataset. This is great for convex, or relatively smooth error manifolds. In this case, we move somewhat directly towards an optimum solution, either local or global. Additionally, batch gradient descent, given an annealed learning rate, will eventually find the minimum located in it's basin of attraction.
+Stochastic gradient descent (SGD) computes the gradient using a single sample. SGD works well (Not well, I suppose, but better than batch gradient descent) for error manifolds that have lots of local maxima/minima. In this case, the somewhat noisier gradient calculated using the reduced number of samples tends to jerk the model out of local minima into a region that hopefully is more optimal.",mle,Technical Machine Learning Interview Questions
+mle0069,Epoch vs. Batch vs. Iteration,"Epoch: one forward pass and one backward pass of all the training examples
+Batch: examples processed together in one pass (forward and backward)
+Iteration: number of training examples / Batch size",mle,Technical Machine Learning Interview Questions
+mle0070,What is vanishing gradient?,"As we add more and more hidden layers, back propagation becomes less and less useful in passing information to the lower layers. In effect, as information is passed back, the gradients begin to vanish and become small relative to the weights of the networks.",mle,Technical Machine Learning Interview Questions
+mle0071,What are dropouts?,"Dropout is a simple way to prevent a neural network from overfitting. It is the dropping out of some of the units in a neural network. It is similar to the natural reproduction process, where the nature produces offsprings by combining distinct genes (dropping out others) rather than strengthening the co-adapting of them.",mle,Technical Machine Learning Interview Questions
+mle0072,Define LSTM,"Long Short Term Memory – are explicitly designed to address the long term dependency problem, by maintaining a state what to remember and what to forget.",mle,Technical Machine Learning Interview Questions
+mle0073,List the key components of LSTM,"Gates (forget, Memory, update & Read)
+tanh(x) (values between -1 to 1)
+Sigmoid(x) (values between 0 to 1)",mle,Technical Machine Learning Interview Questions
+mle0074,List the variants of RNN,"LSTM: Long Short Term Memory
+GRU: Gated Recurrent Unit
+End to End Network
+Memory Network",mle,Technical Machine Learning Interview Questions
+mle0075,"What is Autoencoder, name few applications","Auto encoder is basically used to learn a compressed form of given data. Few applications include
+Data denoising
+Dimensionality reduction
+Image reconstruction
+Image colorization",mle,Technical Machine Learning Interview Questions
+mle0076,What are the components of GAN?,"Generator
+Discriminator",mle,Technical Machine Learning Interview Questions
+mle0077,What's the difference between boosting and bagging?,"Boosting and bagging are similar, in that they are both ensembling techniques, where a number of weak learners (classifiers/regressors that are barely better than guessing) combine (through averaging or max vote) to create a strong learner that can make accurate predictions. Bagging means that you take bootstrap samples (with replacement) of your data set and each sample trains a (potentially) weak learner. Boosting, on the other hand, uses all data to train each learner, but instances that were misclassified by the previous learners are given more weight so that subsequent learners give more focus to them during training.",mle,Technical Machine Learning Interview Questions
+mle0078,Explain how a ROC curve works,The ROC curve is a graphical representation of the contrast between true positive rates and the false positive rate at various thresholds. It’s often used as a proxy for the trade-off between the sensitivity of the model (true positives) vs the fall-out or the probability it will trigger a false alarm (false positives).,mle,Technical Machine Learning Interview Questions
+mle0079,What’s the difference between Type I and Type II error?,"Type I error is a false positive, while Type II error is a false negative. Briefly stated, Type I error means claiming something has happened when it hasn’t, while Type II error means that you claim nothing is happening when in fact something is. A clever way to think about this is to think of Type I error as telling a man he is pregnant, while Type II error means you tell a pregnant woman she isn’t carrying a baby.",mle,Technical Machine Learning Interview Questions
+mle0080,What’s the difference between a generative and discriminative model?,A generative model will learn categories of data while a discriminative model will simply learn the distinction between different categories of data. Discriminative models will generally outperform generative models on classification tasks.,mle,Technical Machine Learning Interview Questions
+mle0081,Instance-Based Versus Model-Based Learning,"Instance-based Learning: The system learns the examples by heart, then generalizes to new cases using a similarity measure.
+Model-based Learning: Another way to generalize from a set of examples is to build a model of these examples, then use that model to make predictions. This is called model-based learning.",mle,Technical Machine Learning Interview Questions
+mle0082,When to use a Label Encoding vs. One Hot Encoding?,"This question generally depends on your dataset and the model which you wish to apply. But still, a few points to note before choosing the right encoding technique for your model:
+We apply One-Hot Encoding when:
+The categorical feature is not ordinal (like the countries above)
+The number of categorical features is less so one-hot encoding can be effectively applied
+We apply Label Encoding when:
+The categorical feature is ordinal (like Jr. kg, Sr. kg, Primary school, high school)
+The number of categories is quite large as one-hot encoding can lead to high memory consumption",mle,Technical Machine Learning Interview Questions
+mle0083,What is the difference between LDA and PCA for dimensionality reduction?,"Both LDA and PCA are linear transformation techniques: LDA is a supervised whereas PCA is unsupervised – PCA ignores class labels.
+We can picture PCA as a technique that finds the directions of maximal variance. In contrast to PCA, LDA attempts to find a feature subspace that maximizes class separability.",mle,Technical Machine Learning Interview Questions
+mle0084,What is t-SNE?,"t-Distributed Stochastic Neighbor Embedding (t-SNE) is an unsupervised, non-linear technique primarily used for data exploration and visualizing high-dimensional data. In simpler terms, t-SNE gives you a feel or intuition of how the data is arranged in a high-dimensional space.",mle,Technical Machine Learning Interview Questions
+mle0085,What is the difference between t-SNE and PCA for dimensionality reduction?,"The first thing to note is that PCA was developed in 1933 while t-SNE was developed in 2008. A lot has changed in the world of data science since 1933 mainly in the realm of compute and size of data. Second, PCA is a linear dimension reduction technique that seeks to maximize variance and preserves large pairwise distances. In other words, things that are different end up far apart. This can lead to poor visualization especially when dealing with non-linear manifold structures. Think of a manifold structure as any geometric shape like: cylinder, ball, curve, etc.
+t-SNE differs from PCA by preserving only small pairwise distances or local similarities whereas PCA is concerned with preserving large pairwise distances to maximize variance.",mle,Technical Machine Learning Interview Questions
+mle0086,What is UMAP?,UMAP (Uniform Manifold Approximation and Projection) is a novel manifold learning technique for dimension reduction. UMAP is constructed from a theoretical framework based in Riemannian geometry and algebraic topology. The result is a practical scalable algorithm that applies to real world data.,mle,Technical Machine Learning Interview Questions
+mle0087,What is the difference between t-SNE and UMAP for dimensionality reduction?,"The biggest difference between the output of UMAP when compared with t-SNE is this balance between local and global structure - UMAP is often better at preserving global structure in the final projection. This means that the inter-cluster relations are potentially more meaningful than in t-SNE. However, it's important to note that, because UMAP and t-SNE both necessarily warp the high-dimensional shape of the data when projecting to lower dimensions, any given axis or distance in lower dimensions still isn’t directly interpretable in the way of techniques such as PCA.",mle,Technical Machine Learning Interview Questions
+mle0088,"How Random Number Generator Works, e.g. rand() function in python works?","It generates a pseudo random number based on the seed and there are some famous algorithm, please see below link for further information on this.",mle,Technical Machine Learning Interview Questions
+mle0089,"Given that we want to evaluate the performance of 'n' different machine learning models on the same data, why would the following splitting mechanism be incorrect :","def get_splits():
+df = pd.DataFrame(...)
+rnd = np.random.rand(len(df))
+train = df[ rnd < 0.8 ]
+valid = df[ rnd >= 0.8 & rnd < 0.9 ]
+test = df[ rnd >= 0.9 ]
+return train, valid, test
+#Model 1
+from sklearn.tree import DecisionTreeClassifier
+train, valid, test = get_splits()
+...
+#Model 2
+from sklearn.linear_model import LogisticRegression
+train, valid, test = get_splits()
+...
+The rand() function orders the data differently each time it is run, so if we run the splitting mechanism again, the 80% of the rows we get will be different from the ones we got the first time it was run. This presents an issue as we need to compare the performance of our models on the same test set. In order to ensure reproducible and consistent sampling we would have to set the random seed in advance or store the data once it is split. Alternatively, we could simply set the 'random_state' parameter in sklearn's train_test_split() function in order to get the same train, validation and test sets across different executions.",mle,Technical Machine Learning Interview Questions
+mle0090,What is the difference between Bayesian vs frequentist statistics?,"Frequentist statistics is a framework that focuses on estimating population parameters using sample statistics, and providing point estimates and confidence intervals.
+Bayesian statistics, on the other hand, is a framework that uses prior knowledge and information to update beliefs about a parameter or hypothesis, and provides probability distributions for parameters.
+The main difference is that Bayesian statistics incorporates prior knowledge and beliefs into the analysis, while frequentist statistics doesn't.",mle,Technical Machine Learning Interview Questions
+mle0091,What is the basic difference between LSTM and Transformers?,"LSTMs (Long Short Term Memory) models consist of RNN cells designed to store and manipulate information across time steps more efficiently. In contrast, Transformer models contain a stack of encoder and decoder layers, each consisting of self attention and feed-forward neural network components.",mle,Technical Machine Learning Interview Questions
+mle0092,What are RCNNs?,Recurrent Convolutional model is a model that is specially designed to make predictions using a sequence of images (more commonly also know as video). These models are used in object detection tasks in computer vision. The RCNN approach combines both region proposal techniques and convolutional neural networks (CNNs) to identify and locate objects within an image.,mle,Technical Machine Learning Interview Questions
+mle0093,Differentiate between Training Sets and Test Sets?,"Training Set
+The data in the training set are the examples provided to the model to train that particular model.
+Usually, around 70-80% of the data is used for training purposes. The number is completely up to the user. However, having a higher amount of training data than testing data is recommended.
+To train the model, the training set is the labeled data that is used.
+Test Set
+The data in the test are used to test the model accuracy of the already trained model.
+The Test Set contains around 20%-30% of the total data. This data is then further used to test the accuracy of the trained model.
+For testing purposes, labeled data is not used at all, however, the results are further verified with the labels.",mle,Basic Machine Learning Interview Questions
+mle0094,Define Bias and Variance,"Bias
+When a model makes predictions, a disparity between the model's prediction values and actual values arises, and this difference is known as bias. Bias is the incapacity of machine learning algorithms like Linear Regression to grasp the real relationship between data points.
+Variance
+If alternative training data were utilized, the variance would describe the degree of variation in the prediction. In layman's terms, variance describes how far a random variable deviates from its predicted value.",mle,Basic Machine Learning Interview Questions
+mle0095,You have come across some missing data in your dataset. How will you handle it?,"In order to handle some missing or corrupted data, the easiest way is to just replace the corresponding rows and columns, which contain the incorrect data, with some different values. The two most useful functions in Panda for this purpose are isnull() and fillna().
+isnull(): is used to find missing values in a dataset
+fillna(): is used to fill missing values with 0’s",mle,Basic Machine Learning Interview Questions
+mle0096,Explain Decision Tree Classification,"A decision tree uses a tree structure to generate any regression or classification models. While the decision tree is developed, the datasets are split up into ever-smaller subsets in a tree-like manner with branches and nodes. Decision trees can handle both category and numerical data.",mle,Basic Machine Learning Interview Questions
+mle0097,How is a logistic regression model evaluated?,"One of the best ways to evaluate a logistic regression model is to use a confusion matrix, which is a very specific table that is used to measure the overall performance of any algorithm.
+Using a confusion matrix, you can easily calculate the Accuracy Score, Precision, Recall, and F1 score. These can be extremely good indicators for your logistic regression model.
+If the recall of your model is low, then it means that your model has too many False Negatives. Similarly, if the precision of your model is low, it signifies that your model has too many False Positives. In order to select a model with a balanced precision and recall score, the F1 Score must be used.",mle,Basic Machine Learning Interview Questions
+mle0098,"To start Linear Regression, you would need to make some assumptions. What are those assumptions?","To start a Linear Regression model, there are some fundamental assumptions that you need to make:
+The model should have a multivariate normal distribution
+There should be no auto-correlation
+Homoscedasiticity, i.e, the dependent variable’s variance should be similar to all of the data
+There should be a linear relationship
+There should be no or almost no multicollinearity present",mle,Basic Machine Learning Interview Questions
+mle0099,What is multicollinearity and how will you handle it in your regression model?,"If there is a correlation between the independent variables in a regression model, it is known as multicollinearity. Multicollinearity is an area of concern as independent variables should always be independent. When you fit the model and analyze the findings, a high degree of correlation between variables might present complications.
+There are various ways to check and handle the presence of multicollinearity in your regression model. One of them is to calculate the Variance Inflation Factor (VIF). If your model has a VIF of less than 4, there is no need to investigate the presence of multicollinearity. However, if your VIF is more than 4, an investigation is very much required, and if VIF is more than 10, there are serious concerns regarding multicollinearity, and you would need to correct your regression model.",mle,Basic Machine Learning Interview Questions
+mle0100,Explain why the performance of XGBoost is better than that of SVM?,"XGBoost is an ensemble approach that employs a large number of trees. This implies that when it repeats itself, it becomes better.
+If our data isn't linearly separable, SVM, being a linear separator, will need to use a Kernel to bring it to a point where it can be split. Due to there not being an ideal Kernel for every dataset, this can be limiting.",mle,Basic Machine Learning Interview Questions
+mle0101,Why is an encoder-decoder model used for NLP?,"An encoder-decoder model is used to create an output sequence based on a given input sequence. The final state of the encoder is used as the initial state of the decoder, and this makes the encoder-decoder model extremely powerful. This also allows the decoder to access the information that is taken from the input sequence by the encoder.",mle,Basic Machine Learning Interview Questions
+mle0102,What are Machine Learning and Artificial Intelligence?,"Artificial Intelligence is a system of producing intelligent machines that can imitate human intelligence. Machine Learning is training machines to learn from present data and act on these experiences in the future. To know further through in-depth comparison, read machine learning vs artificial intelligence vs deep learning.",mle,Basic Machine Learning Interview Questions
+mle0103,Differentiate between Deep Learning and Machine Learning?,Machine Learning adopts algorithms to learn from data sets and apply this to future decision making. Deep Learning is a subset of Machine Learning that uses large amounts of data and complex algorithms to create neural networks that can learn and make decisions on their own.,mle,Basic Machine Learning Interview Questions
+mle0104,What is cross validation?,Cross validation is a concept used to evaluate models’ performances to avoid overfitting. It is an easy method to compare the predictive capabilities of models and is best suitable when limited data is available.,mle,Basic Machine Learning Interview Questions
+mle0105,What are the types of Machine learning?,"There are mainly three types of Machine Learning, viz:
+Reinforcement learning: It is about taking the best possible action to maximize reward in a particular scenario. It is used by various software and machines to find the best path it should take in a given situation.
+Supervised learning: Using labeled datasets to train algorithms to classify data easily for predicting accurate outcomes.
+Unsupervised learning: It uses ML to analyze and cluster unlabeled datasets.",mle,Basic Machine Learning Interview Questions
+mle0106,Differentiate between Supervised and Unsupervised learning,Supervised algorithms are those that use labeled data to learn a mapping function from input variables to output variables. Unsupervised algorithms learn from unlabeled data and discover hidden patterns and structures in the data.,mle,Basic Machine Learning Interview Questions
+mle0107,What is Selection Bias?,"Selection Bias is a statistical error that brings about a bias in the sampling portion of the experiment. This, in turn, causes more selection of the sampling portion than other groups, which brings about an inaccurate conclusion.",mle,Basic Machine Learning Interview Questions
+mle0108,What is the difference between correlation and causality?,"Correlation is the relation of one action (A) to another action (B) when A does not necessarily lead to B, but Causality is the situation where one action (A) causes a result (B).",mle,Basic Machine Learning Interview Questions
+mle0109,What is the difference between Correlation and Covariance?,"Correlation quantifies the relationship between two random variables with three values: 0,1 and -1.
+Covariance is the measure of how two different variables are related and how changes in one impact the other. Read correlation vs covariance to know about these two and for a further in-depth comparison.",mle,Basic Machine Learning Interview Questions
+mle0110,What is the difference between supervised and reinforcement learning?,"Supervised learning algorithms are trained using labeled data, while reinforcement learning algorithms are trained using a reward function. Supervised learning algorithms are used to predict a given output, while reinforcement learning algorithms are used to maximize a reward by taking a series of actions.",mle,Basic Machine Learning Interview Questions
+mle0111,What are the requirements of reinforcement learning environments?,"State, reward data, agent, and environment. It is entirely different from other machine learning paradigms. Here we have an agent and an environment. The environment refers to a task or simulation; the agent is an algorithm that interacts with the environment and tries to solve it.",mle,Basic Machine Learning Interview Questions
+mle0112,What different targets do classification and regression algorithms require?,"Regression algorithms require categorical and numerical targets. Here, regression finds correlations between dependent and independent variables. It helps predict continuous variables such as market trends and weather patterns.
+On the other hand, classification is an algorithm that segregates the dataset into classes on various parameters. Here classification algorithms work to predict the willingness of bank customers to pay their loans, email, or spam classification.",mle,Basic Machine Learning Interview Questions
+mle0113,What are five popular algorithms used in Machine Learning?,"Neural Networks: It is a set of algorithms designed to help machines recognize patterns without being explicitly programmed.
+Decision trees: It is a Supervised learning technique where internal nodes represent the features of a dataset, branches represent the decision rules, and each leaf node represents the outcome.
+K-nearest neighbor: K-nearest neighbor (KNN) is a supervised learning algorithm used for classification and regression. The algorithm finds the k-nearest data points in the training dataset and uses them to make predictions. It works by calculating the distance between the query point and the k-nearest data points and then uses the labels of these points to make a prediction.
+Support Vector Machines (SVM): It is used to create the best line or decision boundary that can segregate n-dimensional space into classes to put the new data point in the correct category quickly.
+Probabilistic networks: They are graphical models of interactions among a set of variables, where the variables are represented as nodes of a graph and the interaction as directed edges between the vertices. It allows a compact description of complex stochastic relationships among several random variables.",mle,Basic Machine Learning Interview Questions
+mle0114,What is the confusion matrix?,"The confusion matrix consists of an error matrix table used for concluding the performance of a classification algorithm. It determines the classification models' performance for a given test data set. It has multiple categorical outputs, but it can only be determined if the actual values for test data are known.",mle,Basic Machine Learning Interview Questions
+mle0115,List the differences between KNN and k-means clustering,"KNN is a Supervised machine learning while K-means is an unsupervised machine learning.
+KNN is a classification or regression machine learning algorithm while K-means is a clustering machine learning algorithm.
+KNN is a lazy learner while K-Means is an eager learner.",mle,Basic Machine Learning Interview Questions
+mle0116,What are the differences between Type I error and Type II error?,"Type I error occurs when the Null Hypothesis (H0) is mistakenly rejected. This is also referred to as the False Positive Error.
+Type II error occurs when a Null Hypothesis that is actually false is accepted. This is also referred to as the False Negative Error.",mle,Basic Machine Learning Interview Questions
+mle0117,What is semi-supervised learning?,A semi-supervised learning happens when a small amount of labeled data is introduced to an algorithm. The algorithm then studies that data and uses it on unlabeled data. Semi-supervised learning combines the efficiency of unsupervised learning and the performance of supervised learning.,mle,Basic Machine Learning Interview Questions
+mle0118,Where are semi-supervised learning applied?,"Some areas it is applied include labeling data, fraud detection, and machine translation.",mle,Basic Machine Learning Interview Questions
+mle0119,What is stemming?,"Stemming is a normalization technique that removes any affix joined to a word, leaving it in its base state. It makes text easier to process. It is commonly used in information retrieval, an important step in text pre-processing and text mining applications. Stemming can be used in various NLP tasks such as text classification, information retrieval, and text summarization.",mle,Basic Machine Learning Interview Questions
+mle0120,What is Lemmatization?,"This is a normalization technique that converts a word into a lemma form, or the root word, which is not the stem word. It is a process in which a word is reduced to its base form, but not similar to stemming; it considers the context of the word and produces a valid word. Lemmatization is quite difficult compared to stemming because it requires a lot more knowledge about the structure of a language; it's a much more intensive process than just trying to set up a heuristic stemming algorithm. Lemmatization is often used in natural language processing (NLP) applications to improve text analysis and feature extraction.",mle,Basic Machine Learning Interview Questions
+mle0121,What is a PCA?,"PCA means Principal Component Analysis, and is mainly used for dimension reduction. It is a statistical technique used to reduce the dimensionality of large datasets while retaining as much information as possible. In other words, it identifies patterns and correlations among variables and summarizes them into a smaller set of uncorrelated variables called principal components.
+PCA is commonly used in data preprocessing and exploratory data analysis to simplify data visualization, identify outliers, and reduce noise in the data. It is also used in machine learning and pattern recognition applications to improve model performance by reducing the number of features used in the analysis.",mle,Basic Machine Learning Interview Questions
+mle0122,What are support vectors in SVM (Support Vector Machine)?,Support vectors are the data points in a dataset that are closest to the hyperplane (the line that separates the classes in the dataset) and are used to build the classifier.,mle,Basic Machine Learning Interview Questions
+mle0123,"In terms of access, how are array and linked lists different?","Linked lists allow users to transverse the full linked lists, even up to the element in a sequential access pattern. However, an array provides access to elements directly using their index value.",mle,Basic Machine Learning Interview Questions
+mle0124,What is P-value?,P-value or probability value indicates the probability of obtaining the observed data or more extreme values by random chance. A small P-value suggests that the observed result is unlikely and that observed data is consistent with the null hypothesis and provides evidence to support the alternative hypothesis.,mle,Basic Machine Learning Interview Questions
+mle0125,What techniques are used to find resemblance in the recommendation system?,"Cosine and Pearson Correlation are techniques used to find resemblance in recommendation systems. Where the Pearson correlation coefficient is the covariance between two vectors divided by their standard deviation, Cosine, on the other hand, is used for measuring the similarity between two vectors.",mle,Basic Machine Learning Interview Questions
+mle0126,What is the difference between Regression and Classification?,"Classification is a concept used to produce discrete results and to classify data into specific regions. On the other hand, regression is used to assess the relationship between independent variables and dependent variables.",mle,Basic Machine Learning Interview Questions
+mle0127,What does the area under the ROC curve indicate?,"ROC stands for Receiver Operating Characteristic. It measures the usefulness of a test where the larger the area, the more useful the test. These areas are used to compare the effectiveness of the tests. A higher AUC (area under the curve) generally indicates that the model is better at distinguishing between the positive and negative classes. AUC values range from 0 to 1, with a value of 0.5 indicating that the model is no better than random guessing, and a value of 1 indicating perfect classification.",mle,Basic Machine Learning Interview Questions
+mle0128,What is a neural network?,"Much like a human brain, the neural network is a network of different neurons connected in a way that helps information flow from one neuron to the other. It is a function that maps input to desired output with a given set of inputs. Structurally, it is organized into an input layer, an output layer, and one or more hidden layers.",mle,Basic Machine Learning Interview Questions
+mle0129,What is an Outlier?,"An outlier is an observation that is significantly different from the other observations in the dataset and can be considered as an error that should be avoided in data analysis. However, they also give insight into special cases in our data at certain times.",mle,Basic Machine Learning Interview Questions
+mle0130,What is another name for a Bayesian Network?,"Casual network, Belief Network, Bayes network, Bayes net, Belief Propagation Network, etc. are some of its other names. It is a probabilistic graphical model that showcases a set of variables and their conditional dependencies.",mle,Basic Machine Learning Interview Questions
+mle0131,What is ensemble learning?,Ensemble learning is a method that merges multiple machine learning models to create various powerful models. The aim is to provide better performance by combining models rather than sticking to a single model.,mle,Basic Machine Learning Interview Questions
+mle0132,What is clustering?,"Clustering is a process of grouping sets of items into several groups. Items or objects must be similar within the cluster and different from other objects in other clusters. The goal of clustering is to identify patterns and similarities in the data that can be used to gain insights and make predictions. Different clustering algorithms use different methods to group data points based on their features and similarity measures, such as distance or density. Clustering is commonly used in various applications such as customer segmentation, image and text classification, anomaly detection, and recommendation systems.",mle,Basic Machine Learning Interview Questions
+mle0133,How would you define collinearity?,Collinearity is when two predator variables in a multiple regression share some correlations.,mle,Basic Machine Learning Interview Questions
+mle0134,What is overfitting?,Overfitting is said to happen when a statistical model observes and learns the details in the training data to the point that it starts negatively impacting the model's performance on new datasets.,mle,Basic Machine Learning Interview Questions
+mle0135,What is the Bayesian Network?,"Bayesian network represents a graphical model between sets of variables. We say it probabilistic because these networks are built on a probability distribution and also use probability theory for prediction and anomaly detection. Bayesian networks are used in for reasoning, diagnostic, anomaly detection, prediction to list a few.",mle,Basic Machine Learning Interview Questions
+mle0136,What is the time series?,"Time series is a particular sequence of data observations in successive order collected over a period. It usually does not need any maximum or minimum time input. It basically forecasts target values based solely on a known history of target values. It is used to predict time-based predictions such as signal processing, engineering domain- communications and control systems, and weather forecasting models.",mle,Basic Machine Learning Interview Questions
+mle0137,What is dimension reduction in ML?,"Dimension reduction is the reduction of variables put under consideration. It lessens the number of features in a dataset while saving as much information as possible. This can be done for various reasons, such as to improve the performance of a learning algorithm, reduce the complexity of a model, or make it easier to visualize the data.",mle,Basic Machine Learning Interview Questions
+mle0138,What is underfitting?,"Underfitting is a type of error in ML models where the model fails to capture the underlying pattern of the data. It occurs when a model is too simplistic and is unable to capture the complexity of the data, leading to poor generalization performance on unseen data. In other words, the model is not complex enough to accurately capture the relationship between the input and output variables. This often leads to high bias and low variance.",mle,Basic Machine Learning Interview Questions
+mle0139,What is sensitivity?,"This is the probability that the prediction outcome of the model is true when the value is positive. It can be described as the metric for evaluating a model’s ability to predict the true positives of each available category.
+Sensitivity = TP / TP+FN (i.e. True Positive/True Positive + False Negative)",mle,Basic Machine Learning Interview Questions
+mle0140,What is specificity?,"This is the probability the prediction of the model is negative when the actual value is negative. It can be termed as the model’s ability to foretell the true negative for each category available..
+Specificity = TN / TN + FP (i.e. True Negative/True Negative + False Positive)",mle,Basic Machine Learning Interview Questions
+mle0141,What are the differences between stochastic gradient descent (SGD) and gradient descent (GD)?,"Both of these gradients are algorithms used to ascertain the parameters that will minimize a loss function. However, in the case of GB, all training samples are evaluated for each set of parameters. On the contrary, for SGB, one training sample is always evaluated for a set of parameters.",mle,Basic Machine Learning Interview Questions
+mle0142,What is an Array?,"An array is a collection of data elements of the same type, such as integers, strings, or floating-point numbers, stored in contiguous memory locations. Every component of an array is identified by an index that represents its position in the array.",mle,Basic Machine Learning Interview Questions
+mle0143,What is a linked list?,This is an ordered collection of similar data type elements joined with pointers. It consists of several individual allocated nodes or a series of connected nodes. Each node contains data plus a pointer or the address of the next node in the list.,mle,Intermediate Machine Learning Interview Questions
+mle0144,Explain Decision Tree in ML,"Decision tree is a supervised machine learning method that shows a map of possible outcomes of related decisions, similar to a tree structure using datasets divided into smaller subsets as the decision tree develops.",mle,Intermediate Machine Learning Interview Questions
+mle0145,Why is the Naive Bayes Method ‘Naive’?,"The Naive Bayes is called naive because, as a supervised learning algorithm, it makes assumptions by applying the Bayes Theorem that all attributes are independent of each other.",mle,Intermediate Machine Learning Interview Questions
+mle0146,State the Bayes’ theorem for Naive Bayes Method,"The Bayes' theorem for Naive Bayes Method is stated as follows:
+P(A|B) = P(B|A) * P(A) / P(B)
+Where,
+P(A|B) is the posterior probability of class (target) given predictor (attribute)
+P(B|A) is the likelihood which is the probability of predictor given class
+P(A) is the prior probability of class
+P(B) is the prior probability of predictor",mle,Intermediate Machine Learning Interview Questions
+mle0147,What is Static Memory Allocation?,"This is when memory is allocated as soon as the array is declared at compilation time. This allocation offers more efficiency and speed in operation as there is no overhead. However, once allocated, the assigned memory space cannot be deallocated during compilation. Static memory is automatically deallocated when the program terminates, and the memory is returned to the operating system.",mle,Intermediate Machine Learning Interview Questions
+mle0148,How would you define Dynamic Memory Allocation?,"Memory allocation is said to be dynamic if the allocation occurs at runtime whenever a new node is added. Nowadays, modern operating systems use dynamic memory allocation.
+DMA is useful in scenarios such as:
+You don't know the amount of memory needed beforehand.
+You want data structures without any upper limit
+For efficient use of memory space",mle,Intermediate Machine Learning Interview Questions
+mle0149,How would you define Precision and Recall?,"Precision and Recall are two commonly used metrics in the field of ML to evaluate the performance of a binary classification model.
+Precision measures how many of the items predicted to belong to the positive class are actually positive. It is defined as the ratio of true positives (TP) to the total number of predicted positives.
+Precision = TP / (TP + FP)
+Recall, on the other hand, measures how many of the actual positive items the model is able to identify. It is defined as the ratio of TP to the total number of actual positives.
+Recall = TP / (TP + FN)",mle,Intermediate Machine Learning Interview Questions
+mle0150,What are some tools used to discover outliers?,"Outliers are errors or extreme values that differ from the data in a set. They can impact the accuracy of your result if not detected through the outlier detection tools. Some popular tools to discover outliers include Z-score, Scatter plot, and Box plot.",mle,Intermediate Machine Learning Interview Questions
+mle0151,What is the Fourier Transform?,This mathematical technique is used to transform a function of time into a function of frequency. It is necessary for ML and deep learning because a convolution in the time domain is a multiplication in the frequency domain.,mle,Intermediate Machine Learning Interview Questions
+mle0152,What is Inductive Logic Programming?,"Inductive logic programming (ILP) is a part of AI that uses logic programming and serves as a uniform representation for examples, background knowledge, and hypotheses. It involves developing algorithms and systems that can automatically learn logic programs from input-output examples, which can then be used to make predictions on new input data.
+We can apply it to various domains, including software engineering, natural language processing, and bioinformatics.",mle,Intermediate Machine Learning Interview Questions
+mle0153,Explain Kernel SVM,"Kernel SVM stands for Kernel Support Vector Machine. In SVM, a kernel is a function that aids in problem-solving. They provide shortcuts to help you avoid doing complicated math. The amazing thing about kernel is that it allows us to go to higher dimensions and execute smooth computations. Kernel SVMs can work with a variety of kernel functions, including linear, polynomial, and radial basis function (RBF) kernels, among others.",mle,Intermediate Machine Learning Interview Questions
+mle0154,What are some types of clustering?,"These are some types of clustering:
+Fuzzy clustering: Each data point can belong to multiple clusters.
+: It divides a set of n observations into k clusters. Used in situations when one doesn’t have existing group labels.
+Hierarchical clustering: It is an algorithm that groups similar objects into segments called clusters. Here, each cluster differs from the others, and the objects within each cluster are the same.
+Density-based clustering: It clusters data based on their density and hence requires uniform density within the cluster. Here density drops n=between clusters.",mle,Intermediate Machine Learning Interview Questions
+mle0155,How would you describe reinforcement learning?,"Reinforcement learning is a type of ML where an agent interacts with an environment and learns to make decisions based on feedback from the environment in the form of rewards or penalties. Unlike supervised and unsupervised learning, the agent is not given labeled data but instead learns from its own experiences through trial and error. The objective of reinforcement learning is to find an optimal policy that maximizes the cumulative reward obtained by the agent over time.",mle,Intermediate Machine Learning Interview Questions
+mle0156,What are some methods to improve inference time?,"Some methods to improve inference time are as follows:
+Cache predictions
+Knowledge distillation
+Reduction of parameters by pruning
+Model size reduction
+Parallel computing",mle,Intermediate Machine Learning Interview Questions
+mle0157,What is content-based filtering and collaborative filtering?,"Content-based filtering recommends items to a user based on their past behavior, preferences, and interests. For example, if a user has shown interest in action movies, then the content-based filtering algorithm will recommend more action movies to that user.
+Collaborative filtering recommends items to a user based on the preferences of other users who have similar tastes. For example, if a user has watched several action movies, the collaborative filtering algorithm will recommend other action movies that were also watched by users who have similar movie preferences.",mle,Intermediate Machine Learning Interview Questions
+mle0158,What is deductive learning and inductive learning?,"Deductive learning is the process of using conclusions to form observations, while inductive learning is using observations to draw conclusions.
+Deductive learning is a top-down approach where a general principle or theory is used to make specific predictions about observations or new data. The process involves starting with a general statement, or hypothesis, and then testing it through observation and experimentation to confirm or reject the hypothesis.
+Inductive learning, on the other hand, is a bottom-up approach where specific observations or data are used to form a general principle or theory. This approach involves observing patterns and regularities in the data, and then using those observations to form a hypothesis or general principle.
+We use inductive learning when there is little or no data available to derive conclusions. On the contrary, some theories are available in the deductive learning approach.",mle,Intermediate Machine Learning Interview Questions
+mle0159,How would you differentiate data mining from Machine learning?,"Data mining is the process of using structured data to extract information or find anomalies, correlations, and patterns within large datasets to predict outcomes using machine learning algorithms.
+But Machine Learning is the development of algorithms to provide abilities to processors to learn without being programmed.",mle,Intermediate Machine Learning Interview Questions
+mle0160,Why is the ROC in a curve important?,"The ROC curve is important because it is a visual representation of how well a model can distinguish between two classes, and it can be used to compare different models. The area under the curve (AUC) is a measure of how well the model performs, with a higher AUC indicating a better model. Additionally, the shape of the curve can indicate whether a model is biased towards one class or another.",mle,Intermediate Machine Learning Interview Questions
+mle0161,Why does overfitting occur in ML?,"Overfitting occurs in ML when the model is too complex or has too many parameters relative to the amount of data that is available. This causes the model to fit the noise of the data rather than the underlying patterns, resulting in poor generalization and an inability to accurately predict on previously unseen data.",mle,Intermediate Machine Learning Interview Questions
+mle0162,What are the functions of unsupervised learning?,"The following are some functions of unsupervised learning:
+Dimensionality reduction
+Finding clusters of data
+Anomaly deduction",mle,Intermediate Machine Learning Interview Questions
+mle0163,What are some functions of supervised learning?,"Some functions of supervised learning as follows:
+Regression
+Feature selection
+Classification
+Time series forecasting",mle,Intermediate Machine Learning Interview Questions
+mle0164,What are the two components of Bayesian logic?,"Two components of Bayesian logic are as follows:
+Prior distribution: This is the information or beliefs that you have about the world before observing any new data. Prior knowledge is typically represented as a probability distribution over possible states of the world.
+Likelihood principle: This is a function that describes the probability of observing some data given a particular state of the world. The likelihood function is typically derived from scientific theories, empirical observations, or expert opinions.",mle,Intermediate Machine Learning Interview Questions
+mle0165,How would you describe a Recommender system?,A recommendation engine can be seen as a system to predict users’ likes and interests and recommend products that fit their tastes. Data used in this system can be derived from user ratings of movies and songs and search engine history.,mle,Intermediate Machine Learning Interview Questions
+mle0166,What functions are used to perform categorical conversion into factor?,ML algorithms need numeric inputs. It requires converting categorical values into factors to get the latter. The functions factor () and as.factor () are used to perform categorical conversion into factor.,mle,Intermediate Machine Learning Interview Questions
+mle0167,Are elements stored consecutively in linked lists?,No. Elements can be stored anywhere in linked lists. A linked list contains nodes where each node is composed of a data field and a reference (link) to the next node.,mle,Intermediate Machine Learning Interview Questions
+mle0168,What is Regularization in ML?,"Regularization is a technique used to prevent overfitting in ML models. Overfitting occurs when a model is too complex and fits the training data too closely, resulting in poor performance on new, unseen data. Regularization techniques add a penalty term to the model's objective function, which encourages the model to find simpler solutions by reducing the magnitude of the coefficients or parameters in the model. This reduces the model's ability to fit the noise in the training data, resulting in better generalization performance on new data. Some popular regularization techniques include L1 (lasso) and L2 (ridge) regularization, which differ in the way they penalize the coefficients.",mle,Intermediate Machine Learning Interview Questions
+mle0169,"Do you consider decision trees to have any advantages or disadvantages? If yes, what are they?","Decision tree algorithms are favored for their interpretability, scalability, and accuracy. They can be used to classify data points quickly and accurately, and are great for dealing with large datasets. They are also simple to understand, making them great for explaining complex models to non-technical stakeholders.",mle,Intermediate Machine Learning Interview Questions
+mle0170,What do you understand about the exploding gradient technique problem in the back propagation technique?,"The exploding gradient problem occurs when large error gradients gather in training, resulting in large changes in the neural network weights. It can result in NaN values due to the values of weights being too large.",mle,Intermediate Machine Learning Interview Questions
+mle0171,What do you understand about the Bias-Variance Tradeoff?,"If your model is simple with only a few parameters, it will have high bias and low variance. With many parameters, it will have low bias and high variance. One needs to find the right balance without overfitting and underfitting the data. This is why there is a tradeoff between bias and variance. Bias-variance tradeoff is important as it helps us know the limitations of our model and how to improve on it.",mle,Advanced Machine Learning Interview Questions
+mle0172,"How would you describe an F1 score, and how would you use it?","This is an evaluation metric in ML that sums up the predictive performance of a model by combining two competing metrics, namely, Precision and Recall. In binary classification, we assume F1 score to measure a model’s accuracy because it is the weighted average of precision and recall scores.
+Scores of F1 range from 0 to 1, with 1 being the best score and 0 being the worst. These F1 scores are used in information retrieval to see how well a model recovers results and how the model performs.",mle,Advanced Machine Learning Interview Questions
+mle0173,Explain the difference between the Loss functions and Cost functions,"We usually call it the Loss function when calculating loss considering only a single point. However, we call it the Cost function when calculating the sum of errors for multiple data.
+In simpler terms, the cost function sums the difference for the training database, while the loss function shows the difference between the actual and predicted values for a single record.",mle,Advanced Machine Learning Interview Questions
+mle0174,How do you handle outlier values?,"Three simple strategies can be used to handle outliers, and these are:
+Dropping them
+Marking them as outliers and including them as a feature
+Transforming the feature to reduce the effect of the outlier",mle,Advanced Machine Learning Interview Questions
+mle0175,"What is a random forest, and how does it work?","Random forest is an ensemble learning method that combines multiple decision trees to make predictions. Each decision tree is built using a different subset of the training data and a random subset of the features. This randomness helps to prevent overfitting and improve the generalization of the model.
+Random forest works in the following steps:
+Take up a sample size from the training data
+Start with a particular node
+Run the algorithm from the start node viz: If the number of observations is smaller than node size, then stop Select random variables Spot the variable that is best at splitting the observations Divide the observations into two nodes Call step ‘a’ on each of these two nodes
+During the process of building each decision tree, the algorithm splits the data at each node based on the feature that provides the best split. This split is determined using a metric such as information gain or Gini impurity.
+Once all the decision trees are built, they are used together to make predictions. The idea is that each tree has its strengths and weaknesses, but by combining them, the weaknesses are averaged out, and the strengths are amplified. This ensemble approach is often more accurate than using a single decision tree.",mle,Advanced Machine Learning Interview Questions
+mle0176,What ensemble techniques can be used to aggregate multiple models?,"Two ensemble techniques that can be used include Bagging and Boosting:
+Bagging ((Bootstrap Aggregating): It is a technique where multiple independent models are trained on different subsets of the training data, and their predictions are aggregated to form the final prediction. The idea behind bagging is to reduce the variance of the model by averaging over multiple models.
+Boosting: This is an iterative ensemble technique where the models are trained sequentially, and each subsequent model is trained on the instances where the previous model performed poorly. The idea behind boosting is to reduce the bias of the model by focusing on the misclassified instances",mle,Advanced Machine Learning Interview Questions
+mle0177,What methods can be used to find the threshold of a classifier?,"The threshold for a classifier can be derived using precision-recall Curves and ROC Curves. In other instances, a grid search can be used to adjust the threshold for finding the best value.",mle,Advanced Machine Learning Interview Questions
+mle0178,How can you check for the Normality of a dataset?,"Plots can be used to check for the normality of datasets, and some of these checks are:
+Kolmogorov-Smirnov Test
+Shapiro-Wilk Test
+Anderson-Darling Test
+D’Agostino Skewness Test",mle,Advanced Machine Learning Interview Questions
+mle0179,How can you differentiate between a parametric and a non-parametric model?,"Parametric models have limited parameters and only need to know the model's parameters to predict new data, whereas non-parametric models have unlimited parameters and have more flexibility in new data prediction.",mle,Advanced Machine Learning Interview Questions
+mle0180,Do you think logistic regression can be used for more than two classes?,"No. Logistic regression is a binary classifier; thus, it cannot be applied to more than two classes. However, it can be employed in multinomial logistic regression of solving multi-class classification problems.",mle,Advanced Machine Learning Interview Questions
+mle0181,What differences exist between Softmax and Sigmoid functions?,"The sigmoid function is a mathematical function that maps any input value to a value between 0 and 1 and it is used for binary classification. On the other hand, the softmax function is used for multi-classification, and the sum of the probabilities will be 1.",mle,Advanced Machine Learning Interview Questions
+mle0182,How can overfitting be avoided in ML?,"Some of the methods that you can use to avoid overfitting in machine learning are:
+Cross validation
+Custom feature selection
+Data augmentation
+Using larger datasets
+Data simplification
+Ensembling
+Regularization",mle,Advanced Machine Learning Interview Questions
+mle0183,Which is better to have? A false positive or false negative?,t depends on the situation. A false negative is risky in fields like medicine when a virus is scanned and reported absent when it is present. A false positive is risky in situations like spam email detection because it can classify an important email as spam.,mle,Advanced Machine Learning Interview Questions
+mle0184,How would you handle a dataset suffering from high variance?,"The bagging algorithm can be used to split the data into subgroups sampling replicated from random data. After this split, the random data is utilized to establish rules using a training algorithm. Thereafter, the polling technique is used to combine all the predicted outcomes of the model.",mle,Advanced Machine Learning Interview Questions
+mle0185,Explain Genetic programming as it relates to Evolutionary algorithm,"Genetic programming is similar to Evolutionary algorithm. It is a subset of evolutionary algorithms that implement the model's parameter, random mutation, crossover, fitness function, and various layers of evolution to resolve a user-defined task.
+Through repeated generations of evaluation and modification, genetic programming can evolve increasingly complex and sophisticated programs that are optimized for the task at hand. This approach can be used for a wide range of applications, from artificial intelligence and machine learning to robotics and optimization problems.",mle,Advanced Machine Learning Interview Questions
+mle0186,What are some classification methods that SVM can handle?,"Some classification methods SVM can handle are as follows:
+Binary classification
+Multiclass classification
+Multilabel classification",mle,Advanced Machine Learning Interview Questions
+mle0187,Why do you think instance-based learning algorithm is sometimes referred to as Lazy learning algorithm?,"Instance-based learning algorithm is sometimes referred to as lazy learning algorithm because it does not require any training data or generalization of the data. Instead, it uses the data the algorithm is given and stores it in memory for use in future predictions. The algorithm does not actively learn from the data, but rather relies on the stored instances to make predictions. Thus, its learning process can be seen as ""lazy"" as compared to other algorithms that actively learn from the data.",mle,Advanced Machine Learning Interview Questions
+mle0188,Explain the reason for pruning of a decision tree,Pruning is the process of removing unnecessary nodes in a decision tree in order to reduce the complexity and improve the generalization accuracy of the model. It is used to prevent overfitting. Pruning helps in reducing the complexity of the decision trees by removing the nodes that do not have a great impact on the prediction accuracy.,mle,Advanced Machine Learning Interview Questions
+mle0189,How Regularization reduces the cost term?,"Regularization is a technique used to prevent overfitting by adding a penalty term to the cost function. The penalty term is designed to discourage the model from assigning too much importance to any single feature or parameter, and encourages the model to distribute importance across all features.",mle,Advanced Machine Learning Interview Questions
+mle0190,What's the need to convert categorical variables into factors?,"Converting categorical variables into factors is necessary because many ML algorithms cannot work with categorical variables in their raw form. ML algorithms work with numerical values, and factors are a way of representing categorical variables as numerical values.",mle,Advanced Machine Learning Interview Questions
+mle0191,Do you believe treating a categorical variable as a continuous variable will result in a better predictive model?,"For a better predictive model, the variable has to be ordinal in nature.",mle,Advanced Machine Learning Interview Questions
+mle0192,Why do we need the confusion matrix?,The confusion matrix is usually a summary of predictions on a classification model that enables us to visualize the performance of an algorithm or model. It measures the performance of an algorithm or model.,mle,Advanced Machine Learning Interview Questions
+mle0193,What differentiates Gradient boosting and Random forest?,"Random forest builds each decision tree independently, while Gradient boosting builds decision trees in sequence, with each tree attempting to improve the performance of the previous tree. Random forest can provide a measure of feature importance that reflects the contribution of each feature to the overall model performance.
+Gradient boosting performs slightly better on imbalanced data.
+Random forest performs better for Multiclass Classification.",mle,Advanced Machine Learning Interview Questions
+mle0194,How does a Box-Cox transformation occur?,"This happens when there is a power transformation of non-normal dependent variables into normal variables. It involves a lambda parameter which, when set to zero, indicates that this transform is equivalent to log-transform.",mle,Advanced Machine Learning Interview Questions
+mle0195,"What functions can be used to identify, drop, and replace missing or corrupted values?","Usually, missing or corrupted values happen when no data is available for certain variables; this can happen due to incomplete data entry, lost files, etc. Some functions that identify, drop, and replace missing or corrupted values are IsNull(), dropna( ), and Fillna() functions in Pandas.",mle,Advanced Machine Learning Interview Questions
+mle0196,How is data divided in cross-validation?,"Cross validation divides data into three parts which are training, testing, and validation data. Data is further divided into k numbers of sub-parts, and the model is trained on k-1 of those sub-parts and then tested on the remaining fold. This process is repeated k times, with each of the k folds used exactly once for testing. The final performance metric is the average of the performance metrics from each of the k test sets.",mle,Advanced Machine Learning Interview Questions
+mle0197,"A game exists where you are required to roll two six-faced dice. You stand a chance to win $50 if the sum of the two dice equals 7. However, you must pay $4 to play each time you roll both dice. Would you partake in this game?","Note: If you play 6 times, what is the probability of making money from this game?
+The first condition states that if the sum of the values on the 2 dice is equal to 7, then you win $50. But for all the other cases, you must pay $4.
+To begin with, let's estimate the number of possible cases if we throw the two dice. The total number of cases is 6*6 = 36.
+In these 36 cases, how many produce a sum of 7?
+Possible combinations that produce a sum of 7 are (1,6), (2,5), (3,4), (4,3), (5,2) and (6,1)..
+This indicates that out of 36 chances, 6 will produce a sum of 7. The ratio now is 6/36 = 1/6
+So this suggests that we have a chance of winning $50, once in every 6 games.
+So to answer the question, if I play 6 times, I will win $50 for one game, whereas for the other 5 games I will have to pay $4 each, which is $20 for all five games. Therefore, I will be at a winning advantage if I win $50 but end up paying $20. Statistically, I’ll be making a profit of $30 every 6 games.",mle,Advanced Machine Learning Interview Questions
+mle0198,Assuming you have a two-column table of users and their friends coupled with a two-column table of users and their liked pages. Write a SQL query to make recommendations using pages that your friends have liked when it should not recommend pages that you have liked,"SELECT f.user_id, l.page_id
+FROM friend f JOIN like l
+ON f.friend_id = l.user_id
+WHERE l.page_id NOT IN (
+SELECT page_id FROM like
+WHERE user_id = f.user_id
+)",mle,Advanced Machine Learning Interview Questions
+mle0199,When recommendations like “....people who did this also bought this” comes up on a website. What sort of algorithm propels that?,This is a recommendation based on collaborative filtering. Collaborative filtering compares users' activities on a website and recommends similar actions to users with similar interests or behavior.,mle,Advanced Machine Learning Interview Questions
+mle0200,What would you do if the model you have trained has a high variance and low bias?,"To solve high variance problems, we will use regularization techniques to rectify this or select the higher features in the feature importance graph to train the model.",mle,Advanced Machine Learning Interview Questions

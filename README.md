@@ -116,4 +116,49 @@ If you want to use other models, you can modify this script accordingly, then up
 
 5. App starts in wide mode by default. You can switch it off in streamlit settings (upper right corner).
 
+### :bar_chart: Monitoring
 
+You can monitor app performance in Grafana dashboard
+
+1. Run `bash init_gr.sh` to create dashboard.
+![Grafana init_gr](/screenshots/init_gr.png)
+
+2. As with streamlit switch to ports tab and click on link with port 3000 (🌐 icon). After loading Grafana use default credentials:
+- Login: "admin"
+- Password: "admin"
+
+
+3. Click 'Dashboards' in the left pane and choose 'Interview preparation assistant'.
+
+![Grafana dasboard](/screenshots/grafana-00.png)
+
+4. Check out app performance
+
+![Grafana dasboard](/screenshots/grafana-01.png)
+
+### :stop_sign: Stop all containers
+
+Run `docker compose down` in command line to stop all services.
+Don't forget to remove downloaded images if you experimented with project locally! 
+
+### Best practices
+ * [x] Hybrid search: combining both text and vector search (Elastic search, encoding)
+
+
+## Next steps
+
+I plan to add more questions to knowledge database and test more models (Llama 3.2).
+
+Stay tuned!
+
+## Support
+
+🙏 Thank you for your attention and time!
+
+- If you experience any issue while following this instruction (or something left unclear), please add it to [Issues](/issues), I'll be glad to help/fix. And your feedback, questions & suggestions are welcome as well!
+- Feel free to fork and submit pull requests.
+
+If you find this project helpful, please ⭐️star⭐️ my repo 
+https://github.com/dmytrovoytko/llm-interview-assistant to help other people discover it 🙏
+
+Made with ❤️ in Ukraine 🇺🇦 Dmytro Voytko

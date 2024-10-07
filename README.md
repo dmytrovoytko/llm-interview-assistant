@@ -53,7 +53,7 @@ Sections used in search and help to focus on specific topics of the interview.
     - Docker and docker-compose for containerization
     - Elastic search to index interview questions-answers bank
     - OpenAI-compatible API, that supports working with Ollama locally, even without GPU
-        * Ollama tested with Microsoft Phi 3/3.5 model, performs better than Google Flan-T5, Gemma 2
+        * Ollama tested with Microsoft Phi 3/3.5 and Alibaba qwen2.5:3b models, they performed better than Google Flan-T5, Gemma 2
         * you can pull and test any model from [Ollama library](https://ollama.com/library)
         * with your own OPENAI_API_KEY you can choose gpt-3.5/gpt-4o
     - PostgreSQL to store asked questions, answers, evaluation (relevance) and user feedback
@@ -68,8 +68,8 @@ Sections used in search and help to focus on specific topics of the interview.
 
 ### :hammer_and_wrench: Setup environment
 
-1. Fork this repo on GitHub. Or use `git clone https://github.com/dmytrovoytko/llm-interview-assistant.git` command to clone it locally, then `cd llm-interview-assistant`.
-2. Create GitHub CodeSpace from the repo ‼️ use 4-core - 16GB RAM machine type.
+1. **Fork this repo on GitHub**. Or use `git clone https://github.com/dmytrovoytko/llm-interview-assistant.git` command to clone it locally, then `cd llm-interview-assistant`.
+2. Create GitHub CodeSpace from the repo ‼️ **use 4-core - 16GB RAM machine type**.
 3. **Start CodeSpace**
 4. The app works in docker containers, you don't need to install packages locally to test it.
 5. **Go to the app directory** `cd interview_assistant`
@@ -80,16 +80,16 @@ Sections used in search and help to focus on specific topics of the interview.
 ### :arrow_forward: Start the app
 
 1. **Run `bash deploy.sh` to start all containers**, including elasticsearch, ollama, postgres, streamlit, grafana. It takes at least couple of minutes to download/build corresponding images, then get all services ready to serve. So you can make yourself some tea/coffee meanwhile. When the new log messages stop appering, press enter to return to a command line. 
-![docker-compose up](/screenshots/docker-compose.png)
+![docker-compose up](/screenshots/docker-compose-00.png)
+
+![docker-compose up](/screenshots/docker-compose-01.png)
 
 2. Run `bash init_db_es.sh` 
 * to create PostgreSQL tables:
+* to ingest and index question database:
 
-![init_db](/screenshots/init_db.png)
+![init_db_es](/screenshots/init_db_es.png)
 
-* to ingest and index question database
-
-![init_es](/screenshots/init_es.png)
 
 3. Run `bash ollama_pull.sh` to pull phi3/phi3.5 Ollama models
 
@@ -100,3 +100,20 @@ If you want to use other models, you can modify this script accordingly, then up
 5. Finally, open streamlit app: switch to ports tab and click on link with port 8501 (🌐 icon).
 
 ![Ports streamlit open](/screenshots/streamlit-open.png)
+
+### :speech_balloon: Interact with the app
+
+1. Set query parameters - choose position, model, query parameters (search type, response length), enter your question.
+2. Press 'Find the answer' button, wait for response. For Ollama Phi3/qwen2.5 in CodeSpace response time was around a minute.
+![streamlit Find the answer](/screenshots/streamlit-00.png)
+
+3. Check relevance evaluated by LLM.
+![streamlit check](/screenshots/streamlit-02.png)
+
+4. Give your feedback by pressing corresponding number of stars 🌟🌟🌟🌟🌟
+- 1-2 are negative
+- 4-5 are positive
+
+5. App starts in wide mode by default. You can switch it off in streamlit settings (upper right corner).
+
+

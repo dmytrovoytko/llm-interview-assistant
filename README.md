@@ -16,14 +16,14 @@ For GitHub CodeSpace option you don't need to use anything extra at all - just y
 - [x] Then I successfully passed my Google Cloud Professional Data Engineer [exam](https://github.com/dmytrovoytko/DmytroVoytko/blob/master/achievements/GCP-PDE-cert.png)
 - [ ] What's the next step? Right - Interview Preparation!
 
-At some moment of life we want a new job, right? So I decided to make my 2nd LLM project that helps Data and ML Engineers prepare for a job Interview.
+At some moment of life we want a new job, right? So I decided to make my 2nd LLM project that helps Data and ML Engineers prepare for a job interview.
 Why? Because just technical knowledge even validated by professional certification(s) is not enough to get a job. Usually interview questions have a bit different angle than certification exams. In addition, interviews include soft skills assessment and behavioral questions.
 
 With right prompts ChatGPT can be a decent interview assistant. Still, it can hallucinate as not trained well for specific topics yet. Or you want to use your local Ollama (like me), but open models know even less?
 
-That's where RAG comes in! RAG is Retrieval Augmented Generation - the process of optimizing the output of a large language model (LLM). It references your prepared knowledge base before generating a response. So instead of asking LLM about exam topics "from scratch", RAG based assistant first gets context from your knowledge base (like QnA records) and then provides you better focused answers. This is what I use in this project.
+That's where RAG comes in! RAG is Retrieval Augmented Generation - the process of optimizing the output of a large language model (LLM). It references your prepared knowledge base before generating a response. So instead of asking LLM about interview topics "from scratch", RAG based assistant first gets context from your knowledge base (like QnA records) and then provides you better focused answers. This is what I use in this project.
 
-Just imagine, you can 'talk to your data'!
+Just imagine, you can 'talk to your data', amazing!✨
 
 ## 🎯 Goals
 
@@ -37,7 +37,7 @@ Thanks to LLM ZoomCamp for the reason to keep learning new cool tools!
 
 ## Dataset
 
-I decided to collect questions with answers from sources like articles on respected Data professions related websites, and transform them into a [dataset](/data). Now it includes 2 .csv files - with Data Engineering and Machine Learning topics. And I plan to load some more QnAs universal for Data related positions. I prepared app UI and backend extensible.
+I collected and processed questions with answers from sources like articles on respected Data professions related websites, and transform them into a [dataset](/data). Now it includes 2 .csv files - with Data Engineering and Machine Learning topics. And I plan to load some more QnAs universal for Data related positions. I prepared app UI and backend extensible.
 
 **Structure**: id, question, text (=answer), position, section.
 
@@ -54,6 +54,27 @@ Sections used in search and help to focus on specific topics of the interview.
     - Elastic search to index interview questions-answers bank
     - OpenAI-compatible API, that supports working with Ollama locally, even without GPU
         * Ollama tested with Microsoft Phi 3/3.5 model, performs better than Flan-T5, Gemma
-        * You can pull and test any model from [Ollama library](https://ollama.com/library)
+        * you can pull and test any model from [Ollama library](https://ollama.com/library)
         * with your own OPENAI_API_KEY you can choose gpt-3.5/gpt-4o
     - PostgreSQL to store asked questions, answers, evaluation (relevance) and user feedback
+
+## 🚀 Instructions to reproduce
+
+- [Setup environment](#hammer_and_wrench-setup-environment)
+- [Start the app](#arrow_forward-start-the-app)
+- [Interact with the app](#speech_balloon-interact-with-the-app)
+- [Monitoring](#bar_chart-monitoring)
+- [Best practices](#best-practices)
+
+### :hammer_and_wrench: Setup environment
+
+1. Fork this repo on GitHub. Or use `git clone https://github.com/dmytrovoytko/llm-interview-assistant.git` command to clone it locally, then `cd llm-interview-assistant`.
+2. Create GitHub CodeSpace from the repo ‼️ use 4-core - 16GB RAM machine type.
+3. **Start CodeSpace**
+4. The app works in docker containers, you don't need to install packages locally to test it.
+5. Go to the app directory `cd interview_assistant`
+6. If you want to develop the project locally, you can run `pip install -r requirements.txt` (project tested on python 3.11/3.12).
+6. If you want to use gpt-3.5/gpt-4 API you need to correct OPENAI_API_KEY in `.env` file, which contains all configuration settings. 
+7. By default instructions (below) scripts will load Ollama/phi3.5 model. If you want to use also Ollama/phi3 uncomment a line in `ollama_pull.sh`. Similarly you can load other Ollama models.
+
+

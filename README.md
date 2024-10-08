@@ -35,7 +35,7 @@ As in the 1st project, I'm making it universal enough, so knowledge base can be 
 
 Thanks to LLM ZoomCamp for the reason to keep learning new cool tools! 
 
-## Dataset
+## 🔢 Dataset
 
 I collected and processed questions with answers from sources like articles on respected Data professions related websites, and transform them into a [dataset](/data). Now it includes 2 .csv files - with Data Engineering and Machine Learning topics. And I plan to load some more QnAs universal for Data related positions. I prepared app UI and backend extensible.
 
@@ -64,6 +64,7 @@ Sections used in search and help to focus on specific topics of the interview.
 - [Start the app](#arrow_forward-start-the-app)
 - [Interact with the app](#speech_balloon-interact-with-the-app)
 - [Monitoring](#bar_chart-monitoring)
+- [Retrieval evaluation](#retrieval-evaluation)
 - [Best practices](#best-practices)
 
 ### :hammer_and_wrench: Setup environment
@@ -103,7 +104,7 @@ If you want to use other models, you can modify this script accordingly, then up
 
 ### :speech_balloon: Interact with the app
 
-1. Set query parameters - choose position, model, query parameters (search type, response length), enter your question.
+1. Set query parameters - choose position, model, query parameters (search type - text, vector; response length - small, medium, long), enter your question.
 2. Press 'Find the answer' button, wait for the response. For Ollama Phi3/qwen2.5 in CodeSpace response time was around a minute.
 ![streamlit Find the answer](/screenshots/streamlit-00.png)
 

@@ -23,19 +23,17 @@ def main():
         layout="wide",
         initial_sidebar_state="expanded",
         menu_items={
-            'Get help': 'https://github.com/dmytrovoytko/llm-interview-assistant',
-            'Report a bug': "https://github.com/dmytrovoytko/llm-interview-assistant/issues",
-            'About': "## Let's get perfectly prepared for a job interview!"
-        }
+            "Get help": "https://github.com/dmytrovoytko/llm-interview-assistant",
+            "Report a bug": "https://github.com/dmytrovoytko/llm-interview-assistant/issues",
+            "About": "## Let's get perfectly prepared for a job interview!",
+        },
     )
     st.title("✨ Interview Preparation Assistant")
 
     # Session state initialization
     if "conversation_id" not in st.session_state:
         st.session_state.conversation_id = str(uuid.uuid4())
-        print_log(
-            f"New conversation started with ID: {st.session_state.conversation_id}"
-        )
+        print_log(f"New conversation started with ID: {st.session_state.conversation_id}")
     if "count" not in st.session_state:
         st.session_state.count = 0
         print_log("Feedback count initialized to 0")
@@ -53,7 +51,14 @@ def main():
     # Model selection
     model_choice = col1.selectbox(
         "Select a model:",
-        ["ollama/phi3.5", "ollama/phi3", "ollama/qwen2.5:3b", "openai/gpt-3.5-turbo", "openai/gpt-4o", "openai/gpt-4o-mini"],
+        [
+            "ollama/phi3.5",
+            "ollama/phi3",
+            "ollama/qwen2.5:3b",
+            "openai/gpt-3.5-turbo",
+            "openai/gpt-4o",
+            "openai/gpt-4o-mini",
+        ],
     )
     print_log(f"User selected model: {model_choice}")
 
@@ -66,16 +71,18 @@ def main():
     print_log(f"User selected response length: {response_length}")
 
     # User input
-    user_input = st.text_input("Enter your question:", 'What is Data Engineering?')
+    user_input = st.text_input("Enter your question:", "What is Data Engineering?")
 
     if st.button("🪄 Find the answer"):
         print_log(f"User asked: '{user_input}'")
         with st.spinner("Processing..."):
             # Generate a new conversation ID for next question
             st.session_state.conversation_id = str(uuid.uuid4())
-            print_log(
-                f"Getting answer from assistant using {model_choice} model and {search_type} search"
-            )
+
+            st.session_state.feedback_saved = 0
+            # selected = None
+
+            print_log(f"Getting answer from assistant using {model_choice} model and {search_type} search")
             start_time = time.time()
             answer_data = get_answer(user_input, position_choice, model_choice, search_type, response_length)
             print_log(f"Answer received in {time.time() - start_time:.2f} seconds")
@@ -93,7 +100,10 @@ def main():
             # Save conversation to database
             print_log("Saving conversation to database")
             save_conversation(
-                st.session_state.conversation_id, user_input, answer_data, position_choice
+                st.session_state.conversation_id,
+                user_input,
+                answer_data,
+                position_choice,
             )
             print_log("Conversation saved successfully")
 
@@ -117,24 +127,23 @@ def main():
     #         print_log("Negative feedback saved to database")
 
     sentiment_mapping = [-2, -1, 0, 1, 2]
-    selected = st.feedback("stars") # "faces"
-    if selected is not None:
+    selected = st.feedback("stars", key=st.session_state.conversation_id)  # "faces"
+    # TODO looks like it triggers multiple times when something changes in dialog and it rerenders
+    # Fixed now?
+    if selected is not None and st.session_state.get("feedback_saved", None) == 0:
         feedback_value = sentiment_mapping[selected]
         st.session_state.count += feedback_value
-        sentiment = 'Positive' if feedback_value>0 else 'Negative'
-        print_log(
-            f"{sentiment} feedback received. New count: {st.session_state.count}"
-        )
+        sentiment = "Positive" if feedback_value > 0 else "Negative"
+        print_log(f"{sentiment} feedback received. New count: {st.session_state.count}")
         save_feedback(st.session_state.conversation_id, feedback_value)
         print_log(f"{sentiment} feedback saved to database")
+        st.session_state.feedback_saved = 1
 
     st.write(f"Current feedback balance: {st.session_state.count}")
 
     # Display recent conversations
     st.subheader("Recent Conversations")
-    relevance_filter = st.selectbox(
-        "Filter by relevance:", ["All", "RELEVANT", "PARTLY_RELEVANT", "NON_RELEVANT"]
-    )
+    relevance_filter = st.selectbox("Filter by relevance:", ["All", "RELEVANT", "PARTLY_RELEVANT", "NON_RELEVANT"])
     recent_conversations = get_recent_conversations(
         limit=5, relevance=relevance_filter if relevance_filter != "All" else None
     )

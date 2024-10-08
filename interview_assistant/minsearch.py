@@ -47,12 +47,12 @@ class Index:
         keyword_data = {field: [] for field in self.keyword_fields}
 
         for field in self.text_fields:
-            texts = [doc.get(field, '') for doc in docs]
+            texts = [doc.get(field, "") for doc in docs]
             self.text_matrices[field] = self.vectorizers[field].fit_transform(texts)
 
         for doc in docs:
             for field in self.keyword_fields:
-                keyword_data[field].append(doc.get(field, ''))
+                keyword_data[field].append(doc.get(field, ""))
 
         self.keyword_df = pd.DataFrame(keyword_data)
 

@@ -72,9 +72,9 @@ Sections used in search and help to focus on specific topics of the interview.
 1. **Fork this repo on GitHub**. Or use `git clone https://github.com/dmytrovoytko/llm-interview-assistant.git` command to clone it locally, then `cd llm-interview-assistant`.
 2. Create GitHub CodeSpace from the repo ‼️ **use 4-core - 16GB RAM machine type**.
 3. **Start CodeSpace**
-4. The app works in docker containers, you don't need to install packages locally to test it.
-5. **Go to the app directory** `cd interview_assistant`
-6. If you want to develop the project locally, you can run `pip install -r requirements.txt` (project tested on python 3.11/3.12).
+4. **Go to the app directory** `cd interview_assistant`
+5. The app works in docker containers, **you don't need to install packages locally to test it**.
+6. Only if you want to develop the project locally, you can run `pip install -r requirements.txt` (project tested on python 3.11/3.12).
 6. **If you want to use gpt-3.5/gpt-4 API you need to correct OPENAI_API_KEY in `.env` file**, which contains all configuration settings. 
 7. By default instructions (below) scripts will load Ollama/phi3.5 model. If you want to use also Ollama/phi3 or Ollama/qwen2.5:3b uncomment a line in `ollama_pull.sh`. Similarly you can load other Ollama models.
 

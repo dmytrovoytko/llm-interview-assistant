@@ -41,7 +41,7 @@ I collected questions with answers from sources like articles on respected Data 
 
 **Structure**: id, question, text (=answer), position, section.
 
-Sections used in search and help to focus on specific topics of the interview.
+Sections are used in search and help to focus on specific topics of the interview.
 
 ## :toolbox: Tech stack
 
@@ -157,15 +157,15 @@ After all, the purpose is to learn, not to get a perfect result. So I tested min
 - hit_rate 0.7722066133563864, MRR 0.661454506159499
 
 **ElasticSearch**:
-- text only: hit_rate 0.5922865013774105, MRR 0.41999540863177215
+- text only: hit_rate 0.592, MRR 0.420
 
-- vector_knn: hit_rate 0.7052341597796143, MRR 0.5814508723599631
+- vector_knn: hit_rate 0.705, MRR 0.581
 
-- text_vector_knn: hit_rate 0.7245179063360881, MRR 0.6150367309458213
+- text_vector_knn: hit_rate 0.725, MRR 0.615
 
-- question_text_vector_knn: hit_rate 0.743801652892562, MRR 0.6330119375573918
+- question_text_vector_knn: hit_rate 0.744, MRR 0.633
 
-- vector_combined_knn: hit_rate 0.7465564738292011, MRR 0.6352846648301189
+- vector_combined_knn: hit_rate 0.747, MRR 0.635
 
 I will continue experimenting with weights and boosting.
 
@@ -175,10 +175,10 @@ I will continue experimenting with weights and boosting.
 
 ## Next steps
 
-I plan to 
-- add more questions to knowledge database
+I plan to:
+- add more questions to the knowledge database, add other positions
 - test more models (like Llama 3.2)
-- experiment with prompts
+- fine tune prompts
 - experiment with weights and boost to improve retrieval metrics
 
 Stay tuned!

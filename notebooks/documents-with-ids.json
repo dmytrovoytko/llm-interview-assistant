@@ -1,0 +1,1017 @@
+[
+  {
+    "id": "de0001",
+    "question": "What is Data Engineering (for you)?",
+    "text": "This may seem like a pretty basic data engineer interview questions, but regardless of your skill level, this may come up during your interview. Your interviewer wants to see what your specific definition of data engineering is, which also makes it clear that you know what the work entails.  So, what is it? In a nutshell, it is the act of transforming, cleansing, profiling, and aggregating large data sets. You can also take it a step further and discuss the daily duties of a data engineer, such as ad-hoc data query building and extracting, owning an organization\u2019s data stewardship, and so on.",
+    "position": "de",
+    "section": "Basic Data Engineering Interview Questions"
+  },
+  {
+    "id": "de0002",
+    "question": "Why did you choose a career in Data Engineering?",
+    "text": "An interviewer might ask this question to learn more about your motivation and interest behind choosing data engineering as a career. They want to employ individuals who are passionate about the field. You can start by sharing your story and insights you have gained to highlight what excites you most about being a data engineer.",
+    "position": "de",
+    "section": "Basic Data Engineering Interview Questions"
+  },
+  {
+    "id": "de0003",
+    "question": "How does a data warehouse differ from an operational database?",
+    "text": "This data engineer interview question may be more geared toward those on the intermediate level, but in some positions, it may also be considered an entry-level question. You\u2019ll want to answer by stating that databases using Delete SQL statements, Insert, and Update is standard operational databases that focus on speed and efficiency. As a result, analyzing data can be a little more complicated. With a data warehouse, on the other hand, aggregations, calculations, and select statements are the primary focus. These make data warehouses an ideal choice for data analysis.",
+    "position": "de",
+    "section": "Basic Data Engineering Interview Questions"
+  },
+  {
+    "id": "de0004",
+    "question": "What Do *args and **kwargs Mean?",
+    "text": "If you\u2019re interviewing for a more advanced role, you should be prepared to answer complex coding questions. This specific coding question is commonly asked in data engineering interviews, and you\u2019ll want to answer by telling your interviewer that *args defines an ordered function and that **kwargs represent unordered arguments used in a function. To impress your interviewer, you may want to write down this code in a visual example to demonstrate your expertise.",
+    "position": "de",
+    "section": "Basic Data Engineering Interview Questions"
+  },
+  {
+    "id": "de0005",
+    "question": "As a data engineer, how have you handled a job-related crisis?",
+    "text": "Data engineers have a lot of responsibilities, and it\u2019s a genuine possibility that you\u2019ll face challenges while on the job, or even emergencies. Just be honest and let them know what you did to solve the problem. If you have yet to encounter an urgent issue while on the job or this is your first data engineering role, tell your interviewer what you would do in a hypothetical situation. For example, you can say that if data were to get lost or corrupted, you would work with IT to make sure data backups were ready to be loaded, and that other team members have access to what they need.",
+    "position": "de",
+    "section": "Basic Data Engineering Interview Questions"
+  },
+  {
+    "id": "de0006",
+    "question": "Do you have any experience with data modeling?",
+    "text": "Unless you are interviewing for an entry-level role, you will likely be asked this question at some point during your interview. Start with a simple yes or no. Even if you don\u2019t have experience with data modeling, you\u2019ll want to be at least able to define it: the act of transforming and processing fetched data and then sending it to the right individual(s). If you are experienced, you can go into detail about what you\u2019ve done specifically. Perhaps you used tools like Talend, Pentaho, or Informatica. If so, say it. If not, simply being aware of the relevant industry tools and what they do would be helpful.",
+    "position": "de",
+    "section": "Basic Data Engineering Interview Questions"
+  },
+  {
+    "id": "de0007",
+    "question": "Why are you interested in this job, and why should we hire you?",
+    "text": "It is a fundamental data engineer interview question, but your answer can set you apart from the rest. To demonstrate your interest in the job, identify a few exciting features of the job, which makes it an excellent fit for you and then mention why you love the company.\nFor the second part of the question, link your skills, education, personality, and professional experience to the job and company culture. You can back your answers with examples from previous experience. As you justify your compatibility with the job and company, be sure to depict yourself as energetic, confident, motivated, and culturally fit for the company.",
+    "position": "de",
+    "section": "Basic Data Engineering Interview Questions"
+  },
+  {
+    "id": "de0008",
+    "question": "What are the essential skills required to be a data engineer?",
+    "text": "Every company can have its own definition of a data engineer, and they match your skills and qualifications with the company's assessment.\nHere is a list of must-have skills and requirements if you are aiming to be a successful data engineer:\nComprehensive knowledge about Data Modelling.\nUnderstanding about database design & database architecture. In-Depth Database Knowledge \u2013 SQL and NoSQL.\nWorking experience of data stores and distributed systems like Hadoop (HDFS).\nData Visualization Skills.\nExperience in Data Warehousing and ETL (Extract Transform Load) Tools.\nYou should have robust computing and math skills.\nOutstanding communication, leadership, critical thinking, and problem-solving capabilities are an added advantage.\nYou can mention specific examples in which a data engineer would apply these skills.",
+    "position": "de",
+    "section": "Basic Data Engineering Interview Questions"
+  },
+  {
+    "id": "de0009",
+    "question": "Can you name the essential frameworks and applications for data engineers?",
+    "text": "This data engineer interview question is often asked to evaluate whether you understand the critical requirements for the position and have the desired technical skills. In your answer, accurately mention the names of frameworks along with your level of experience  with each.\nYou can list all of the technical applications like SQL, Hadoop, Python, and more, along with your proficiency level in each. You can also state the frameworks which want to learn more about if given the opportunity.",
+    "position": "de",
+    "section": "Basic Data Engineering Interview Questions"
+  },
+  {
+    "id": "de0010",
+    "question": "Are you experienced in Python, Java, Bash, or other scripting languages?",
+    "text": "This question is asked to emphasize the importance of understanding scripting languages as a data engineer. It is essential to have a comprehensive knowledge of scripting languages, as it allows you to perform analytical tasks efficiently and automate data flow.",
+    "position": "de",
+    "section": "Basic Data Engineering Interview Questions"
+  },
+  {
+    "id": "de0011",
+    "question": "Can you differentiate between a Data Engineer and Data Scientist?",
+    "text": "With this question, the recruiter is trying to assess your understanding of different job roles within a data warehouse team. The skills and responsibilities of both positions often overlap, but they are distinct from each other.\nData Engineers develop, test, and maintain the complete architecture for data generation, whereas data scientists analyze and interpret complex data. They tend to focus on organization and translation of Big Data. Data scientists require data engineers to create the infrastructure for them to work.",
+    "position": "de",
+    "section": "Basic Data Engineering Interview Questions"
+  },
+  {
+    "id": "de0012",
+    "question": "What, according to you, are the daily responsibilities of a data engineer?",
+    "text": "This question assesses your understanding of the role of a data engineer role and job description.\nYou can explain some crucial tasks a data engineer like:\nDevelopment, testing, and maintenance of architectures.\nAligning the design with business requisites.\nData acquisition and development of data set processes.\nDeploying machine learning and statistical models\nDeveloping pipelines for various ETL operations and data transformation\nSimplifying data cleansing and improving the de-duplication and building of data.\nIdentifying ways to improve data reliability, flexibility, accuracy, and quality.\nThis is one of the most commonly asked data engineer interview questions.",
+    "position": "de",
+    "section": "Basic Data Engineering Interview Questions"
+  },
+  {
+    "id": "de0013",
+    "question": "What is your approach to developing a new analytical product as a data engineer?",
+    "text": "The hiring managers want to know your role as a data engineer in developing a new product and evaluate your understanding of the product development cycle. As a data engineer, you control the outcome of the final product as you are responsible for building algorithms or metrics with the correct data.\nYour first step would be to understand the outline of the entire product to comprehend the complete requirements and scope. Your second step would be looking into the details and reasons for each metric. Think about as many issues that could occur, and it helps you to create a more robust system with a suitable level of granularity.",
+    "position": "de",
+    "section": "Experience"
+  },
+  {
+    "id": "de0014",
+    "question": "What was the algorithm you used on a recent project?",
+    "text": "The interviewer might ask you to select an algorithm you have used in the past project and can ask some follow-up questions like:\nWhy did you choose this algorithm, and can you contrast this with other similar ones?\nWhat is the scalability of this algorithm with more data?\nAre you happy with the results? If you were given more time, what could you improve?\nThese questions are a reflection of your thought process and technical knowledge. First, identify the project you might want to discuss. If you have an actual example within your area of expertise and an algorithm related to the company's work, then use it to pique the interest of your hiring manager. Secondly, make a list of all the models you worked with and your analysis. Start with simple models and do not overcomplicate things. The hiring managers want you to explain the results and their impact.",
+    "position": "de",
+    "section": "Experience"
+  },
+  {
+    "id": "de0015",
+    "question": "What tools did you use in a recent project?",
+    "text": "Interviewers want to assess your decision-making skills and knowledge about different tools. Therefore, use this question to explain your rationale for choosing specific tools over others.\nWalk the hiring managers through your thought process, explaining your reasons for considering the particular tool, its benefits, and the drawbacks of other technologies.\nIf you find that the company works on the techniques you have previously worked on, then weave your experience with the similarities.",
+    "position": "de",
+    "section": "Experience"
+  },
+  {
+    "id": "de0016",
+    "question": "What challenges came up during your recent project, and how did you overcome these challenges?",
+    "text": "Any employer wants to evaluate how you react during difficulties and what you do to address and successfully handle the challenges.\nWhen you talk about the problems you encountered, frame your answer using the STAR method:\nSituation: Brief them about the circumstances due to which problem occurred.\nTask: It is essential to elaborate on your role in overcoming the problem. For example, if you took a leadership role and provided a working solution, then showcasing it could be decisive if you were interviewing for a leadership position.\nAction: Walk the interviewer through the steps you took to fix the problem.\nResult: Always explain the consequences of your actions. Talk about the learnings and insights gained by you and other stakeholders.",
+    "position": "de",
+    "section": "Experience"
+  },
+  {
+    "id": "de0017",
+    "question": "Have you ever transformed unstructured data into structured data?",
+    "text": "It is an important question as your answer can demonstrate your understating of both the data types and your practical working experience. You can answer this question by briefly distinguishing between both categories. The unstructured data must be transformed into structured data for proper data analysis, and you can discuss the methods for transformation. You must share a real-world situation wherein you changed the unstructured data into structured data. If you are a fresh graduate and don't have professional experience, discuss information related to your academic projects.",
+    "position": "de",
+    "section": "Data Modelling"
+  },
+  {
+    "id": "de0018",
+    "question": "What is Data Modelling? Do you understand different Data Models?",
+    "text": "Data Modelling is the initial step towards data analysis and database design phase. Interviewers want to understand your knowledge. You can explain that is the diagrammatic representation to show the relation between entities. First, the conceptual model is created, followed by the logical model and, finally, the physical model. The level of complexity also increases in this pattern.",
+    "position": "de",
+    "section": "Data Modelling"
+  },
+  {
+    "id": "de0019",
+    "question": "Can you list and explain the design schemas in Data Modelling?",
+    "text": "Design schemas are the fundamentals of data engineering, and interviewers ask this question to test your data engineering knowledge. In your answer, try to be concise and accurate. Describe the two schemas, which are Star schema and Snowflake schema.\nExplain that Star Schema is divided into a fact table referenced by multiple dimension tables, which are all linked to a fact table. In contrast, in Snowflake Schema, the fact table remains the same, and dimension tables are normalized into many layers looking like a snowflake.",
+    "position": "de",
+    "section": "Data Modelling"
+  },
+  {
+    "id": "de0020",
+    "question": "How would you validate a data migration from one database to another?",
+    "text": "The validity of data and ensuring that no data is dropped should be of utmost priority for a data engineer. Hiring managers ask this question to understand your thought process on how validation of data would happen.\nYou should be able to speak about appropriate validation types in different scenarios. For instance, you could suggest that validation could be a simple comparison, or it can happen after the complete data migration.",
+    "position": "de",
+    "section": "Data Modelling"
+  },
+  {
+    "id": "de0021",
+    "question": "Have you worked with ETL? If yes, please state, which one do you prefer the most and why?",
+    "text": "With this question, the recruiter needs to know your understanding and experience regarding the ETL (Extract Transform Load) tools and process. You should list all the tools in which you have expertise and pick one as your favourite. Point out the vital properties which make that tool stand out and validate your preference to demonstrate your knowledge in the ETL process.",
+    "position": "de",
+    "section": "Hadoop"
+  },
+  {
+    "id": "de0022",
+    "question": "What is Hadoop? How is it related to Big data? Can you describe its different components?",
+    "text": "This question is most commonly asked by hiring managers to verify your knowledge and experience in data engineering. You should tell them that Big data and Hadoop are related to each other as Hadoop is the most common tool for processing Big data, and you should be familiar with the framework.\nWith the escalation of big data, Hadoop has also become popular. It is an open-source software framework that utilizes various components to process big data. The developer of Hadoop is the Apache foundation, and its utilities increase the efficiency of many data applications.\nHadoop comprises of mainly four components:\nHDFS stands for Hadoop Distributed File System and stores all of the data of Hadoop. Being a distributed file system, it has a high bandwidth and preserves the quality of data.\nMapReduce processes large volumes of data.\nHadoop Common is a group of libraries and functions you can utilize in Hadoop.\nYARN (Yet Another Resource Negotiator)deals with the allocation and management of resources in Hadoop.",
+    "position": "de",
+    "section": "Hadoop"
+  },
+  {
+    "id": "de0023",
+    "question": "Do you have any experience in building data systems using the Hadoop framework?",
+    "text": "If you have experience with Hadoop, state your answer with a detailed explanation of the work you did to focus on your skills and tool's expertise. You can explain all the essential features of Hadoop. For example, you can tell them you utilized the Hadoop framework because of its scalability and ability to increase the data processing speed while preserving the quality.\nSome features of Hadoop include:\nIt is Java-Based. Hence, there may be no additional training required for team members. Also, it is easy to use.\nAs the data is stored within Hadoop, it is accessible in the case of hardware failure from other paths, which makes it the best choice for handling big data.\nIn Hadoop, data is stored in a cluster, making it independent of all the other operations.\nIn case you have no experience with this tool, learn the necessary information about the tool's properties and attributes.",
+    "position": "de",
+    "section": "Hadoop"
+  },
+  {
+    "id": "de0024",
+    "question": "Can you tell me about NameNode? What happens if NameNode crashes or comes to an end?",
+    "text": "It is the centre-piece or central node of the Hadoop Distributed File System(HDFS), and it does not store actual data. It stores metadata. For example, the data being stored in DataNodes on which rack and which DataNode the information is stored. It tracks the different files present in clusters. Generally, there is one NameNode, so when it crashes, the system may not be available.",
+    "position": "de",
+    "section": "Hadoop"
+  },
+  {
+    "id": "de0025",
+    "question": "Are you familiar with the concepts of Block and Block Scanner in HDFS?",
+    "text": "You'll want to answer by describing that Blocks are the smallest unit of a data file. Hadoop automatically divides huge data files into blocks for secure storage. Block Scanner validates the list of blocks presented on a DataNode.",
+    "position": "de",
+    "section": "Hadoop"
+  },
+  {
+    "id": "de0026",
+    "question": "What happens when Block Scanner detects a corrupted data block?",
+    "text": "It is one of the most typical and popular interview questions for data engineers. You should answer this by stating all steps followed by a Block scanner when it finds a corrupted block of data.\nFirstly, DataNode reports the corrupted block to NameNode.NameNode makes a replica using an existing model. If the system does not delete the corrupted data block, NameNode creates replicas as per the replication factor.",
+    "position": "de",
+    "section": "Hadoop"
+  },
+  {
+    "id": "de0027",
+    "question": "What are the two messages that NameNode gets from DataNode?",
+    "text": "NameNodes gets information about the data from DataNodes in the form of messages or signals.\nThe two signs are:\nBlock report signals which are the list of data blocks stored on DataNode and its functioning.\nHeartbeat signals that the DataNode is alive and functional. It is a periodic report to establish whether to use NameNode or not. If this signal is not sent, it implies DataNode has stopped working.",
+    "position": "de",
+    "section": "Hadoop"
+  },
+  {
+    "id": "de0028",
+    "question": "Can you elaborate on Reducer in Hadoop MapReduce? Explain the core methods of Reducer?",
+    "text": "Reducer is the second stage of data processing in the Hadoop Framework. The Reducer processes the data output of the mapper and produces a final output that is stored in HDFS.\nThe Reducer has 3 phases:\nShuffle: The output from the mappers is shuffled and acts as the input for Reducer.\nSorting is done simultaneously with shuffling, and the output from different mappers is sorted.\nReduce: in this step, Reduces aggregates the key-value pair and gives the required output, which is stored on HDFS and is not further sorted.\nThere are three core methods in Reducer:\nSetup: it configures various parameters like input data size.\nReduce: It is the main operation of Reducer. In this method, a task is defined for the associated key.\nCleanup: This method cleans temporary files at the end of the task.",
+    "position": "de",
+    "section": "Hadoop"
+  },
+  {
+    "id": "de0029",
+    "question": "How can you deploy a big data solution?",
+    "text": "While asking this question, the recruiter is interested in knowing the steps you would follow to deploy a big data solution. You should answer by emphasizing on the three significant steps which are:\nData Integration/Ingestion: In this step, the extraction of data using data sources like RDBMS, Salesforce, SAP, MySQL is done.\nData storage: The extracted data would be stored in an HDFS or NoSQL database.\nData processing: the last step should be deploying the solution using processing frameworks like MapReduce, Pig, and Spark.",
+    "position": "de",
+    "section": "Python"
+  },
+  {
+    "id": "de0030",
+    "question": "Which Python libraries would you utilize for proficient data processing?",
+    "text": "This question lets the hiring manager evaluate whether the candidate knows the Basic Data Engineering Interview Questions of Python as it is the most popular language used by data engineers.\nYour answer should include NumPy as it is utilized for efficient processing of arrays of numbers and pandas, which is great for statistics and data preparation for machine learning work. The interviewer can ask you questions like why would you use these libraries and list some examples where you would not use them.",
+    "position": "de",
+    "section": "Python"
+  },
+  {
+    "id": "de0031",
+    "question": "Can you differentiate between list and tuples?",
+    "text": "Again, this question assesses your in-depth knowledge of Python. In Python, List and Tuple are the classes of data structure where Lists are mutable and can be edited, but Tuples are immutable and cannot be modified. Support your points with the help of examples.",
+    "position": "de",
+    "section": "Python"
+  },
+  {
+    "id": "de0032",
+    "question": "How can you deal with duplicate data points in an SQL query?",
+    "text": "Interviewers can ask this question to test your SQL knowledge and how invested you are in this interview process as they would expect you to ask questions in return. You can ask them what kind of data they are working with and what values would likely be duplicated?\nYou can suggest the use of SQL keywords DISTINCT & UNIQUE to reduce duplicate data points. You should also state other ways like using GROUP BY to deal with duplicate data points.",
+    "position": "de",
+    "section": "Python"
+  },
+  {
+    "id": "de0033",
+    "question": "Did you ever work with big data in a cloud computing environment?",
+    "text": "Nowadays, most companies are moving their services to the cloud. Therefore, hiring managers would like to understand your cloud computing capabilities, knowledge of industry trends, and the future of the company's data.\nYou must answer it stating that you are prepared for the possibility of working in a virtual workspace as it offers many advantages like:\nFlexibility to scale up the environment as required,\nSecure access to data from anywhere\nHaving backups in case of an emergency",
+    "position": "de",
+    "section": "Python"
+  },
+  {
+    "id": "de0034",
+    "question": "How can data analytics help the business grow and boost revenue?",
+    "text": "Ultimately, it all comes down to business growth and revenue generation, and Big Data analysis has become crucial for businesses. All companies want to hire candidates who understand how to help the business grow, achieve their goals, and result in higher ROI.\nYou can answer this question by illustrating the advantages of data analytics to boost revenue, improve customer satisfaction, and increase profit. Data analytics helps in setting realistic goals and supports decision making. By implementing Big Data analytics, businesses may encounter a 5-20% significant increase in revenue. Walmart, Facebook, LinkedIn are some of the companies using big data analytics to boost their income.",
+    "position": "de",
+    "section": "Python"
+  },
+  {
+    "id": "de0035",
+    "question": "Define Hadoop Streaming",
+    "text": "Hadoop Streaming is a feature or utility included with a Hadoop distribution that lets programmers or developers construct Map-Reduce programs in many programming languages such as Python, Ruby, C++, Perl, and others. We may leverage any language capable of reading from STDIN (standard input), such as keyboard input, and write to STDOUT (standard output).",
+    "position": "de",
+    "section": "Python"
+  },
+  {
+    "id": "de0036",
+    "question": "What is the full form of HDFS?",
+    "text": "The full form of HDFS is Hadoop Distributed File System.",
+    "position": "de",
+    "section": "Python"
+  },
+  {
+    "id": "de0037",
+    "question": "List out various XML configuration files in Hadoop",
+    "text": "The following are the various XML configuration files in Hadoop:\nHADOOP-ENV.sh\nCORE-SITE.XML\nHDFS-SITE.XML\nMAPRED-SITE.XML\nMasters\nSlave",
+    "position": "de",
+    "section": "Big Data"
+  },
+  {
+    "id": "de0038",
+    "question": "What are the four v\u2019s of big data?",
+    "text": "The four V's of Big Data are Volume, Velocity, Variety, and Veracity.",
+    "position": "de",
+    "section": "Big Data"
+  },
+  {
+    "id": "de0039",
+    "question": "Explain the features of Hadoop",
+    "text": "Some of the most important features of Hadoop are:\nIt's open-source: It is an open-source project, which implies that its source code is freely available for modification, inspection, and analysis, allowing organisations to adapt the code to meet their needs.\nIt offers fault tolerance: Hadoop's most critical feature is fault tolerance. To achieve fault tolerance, Hadoop 2's HDFS employs a replication strategy. Based on the replication, it beautifully makes a clone of every block on each system (by default, it\u2019s 3). As a result, if any machine in a cluster fails, data may be accessed from other devices that carry duplicates of the same data.\nIt is highly scalable: To reach high computing power, the Hadoop cluster is highly scalable, which means we may add any amount of nodes or expand the hardware potential of nodes. This gives the Hadoop architecture horizontal as well as vertical scalability.",
+    "position": "de",
+    "section": "Big Data"
+  },
+  {
+    "id": "de0040",
+    "question": "What is the abbreviation of COSHH?",
+    "text": "COSHH stands for Control of Substances Hazardous to Health.",
+    "position": "de",
+    "section": "Big Data"
+  },
+  {
+    "id": "de0041",
+    "question": "Explain Star Schema",
+    "text": "A Star Schema is basically a multi-dimensional data model that is used to arrange data in a database so that it may be easily understood and analysed. Data marts, Data Warehouses, databases, and other technologies can all benefit from star schemas. The star schema style is ideal for querying massive amounts of data.",
+    "position": "de",
+    "section": "Big Data"
+  },
+  {
+    "id": "de0042",
+    "question": "Explain FSCK",
+    "text": "FSCK, an acronym for File System Consistency Checker, is one method older Linux-based systems still employ to detect and correct errors. It is not a comprehensive solution, as inodes pointing to junk data may still exist. The primary goal is to ensure that the metadata is internally consistent.",
+    "position": "de",
+    "section": "Big Data"
+  },
+  {
+    "id": "de0043",
+    "question": "Explain Snowflake Schema",
+    "text": "A snowflake schema is basically a multidimensional database schema that divides subdimensions into dimension tables. Engineers convert every dimension table into logical subdimensions while designing a snowflake schema. As a result, the data model turns out to be more complicated, but it might also make it straightforward for analysts in dealing with it, particularly for certain data kinds. Because its ERD (entity-relationship diagram) resembles a snowflake, it is known as the \"snowflake schema.\"",
+    "position": "de",
+    "section": "Big Data"
+  },
+  {
+    "id": "de0044",
+    "question": "Distinguish between Star and Snowflake Schema",
+    "text": "The following are some of the distinguishing features of a StE Schema and a Snowflake Schema:\nThe star schema is the most basic kind of Data Warehouse schema. It's referred to as the star schema as its structure is similar to a star's. A Snowflake Schema is an expansion of a Star Schema that adds dimension. It's called a snowflake, as the diagram appears to be like a snowflake.\nOnly a single join describes the link between any dimension table and the fact table in a star schema. A fact table is enveloped by dimension tables in the star schema, whereas a snowflake schema is surrounded by dimension tables, which are surrounded by dimension tables, and so forth. To get data from a snowflake schema, numerous joins are required.",
+    "position": "de",
+    "section": "Big Data"
+  },
+  {
+    "id": "de0045",
+    "question": "Explain Hadoop Distributed File System",
+    "text": "Hadoop applications use HDFS (Hadoop Distributed File System) as their primary storage system. This open-source framework operates by passing data between nodes as quickly as possible. Companies that must process and store large amounts of data frequently employ it. HDFS is a critical component of many Hadoop systems since it allows for managing and analysing large amounts of data.",
+    "position": "de",
+    "section": "Big Data"
+  },
+  {
+    "id": "de0046",
+    "question": "What Is the full form of YARN?",
+    "text": "The full form of YARN is Yet Another Resource Negotiator.",
+    "position": "de",
+    "section": "Big Data"
+  },
+  {
+    "id": "de0047",
+    "question": "List various modes in Hadoop",
+    "text": "There are three different types of modes in Hadoop:\nFully-Distributed Mode\nPseudo-Distributed Mode\nStandalone Mode",
+    "position": "de",
+    "section": "Big Data"
+  },
+  {
+    "id": "de0048",
+    "question": "How to achieve security in Hadoop?",
+    "text": "Apache Hadoop offers users security in the following ways:\nKerberos was implemented using SASL/GSSAPI. It is also used on RPC connections to mutually validate users, their procedures, and Hadoop services.\nDelegation tokens are used in connection with the NameNode for future authenticated access that does not need the usage of the Kerberos Server.\nWeb application and web console developers might create their own HTTP authentication method, including HTTP SPNEGO authentication.",
+    "position": "de",
+    "section": "Big Data"
+  },
+  {
+    "id": "de0049",
+    "question": "What Is Heartbeat in Hadoop?",
+    "text": "A heartbeat in Hadoop is a signal sent from the Datanode to the Namenode, indicating it is alive. In HDFS, the lack of a heartbeat signals a problem, and the Namenode and Datanode cannot do any computations.",
+    "position": "de",
+    "section": "Big Data"
+  },
+  {
+    "id": "de0050",
+    "question": "Distinguish between NAS and DAS in Hadoop",
+    "text": "The following are some of the differences between NAS (Network Attached Storage) and DAS (Direct Attached Storage):\nThe computing and storage layers are separated in NAS. Storage is dispersed among several servers in a network. Storage is tied to the node where computing occurs in DAS.\nApache Hadoop is founded on the notion of bringing processing close to the data. As a result, the storage disc must be close to the calculation. DAS provides excellent performance on a Hadoop cluster. DAS can also be implemented on common hardware. As a result, it is less expensive when compared to NAS.",
+    "position": "de",
+    "section": "Big Data"
+  },
+  {
+    "id": "de0051",
+    "question": "List important fields or languages used by data engineers",
+    "text": "Scala, Java, and Python are some of the most sought-after programming languages that are leveraged by data engineers.",
+    "position": "de",
+    "section": "Big Data"
+  },
+  {
+    "id": "de0052",
+    "question": "What is Big Data?",
+    "text": "Big data refers to huge, complicated data sets that are created and sent in real-time from a wide range of sources. Big data collections can be organised, semi-structured, or unstructured, and they are regularly examined to uncover relevant patterns and insights regarding user and machine behaviour.",
+    "position": "de",
+    "section": "Big Data"
+  },
+  {
+    "id": "de0053",
+    "question": "What is FIFO Scheduling?",
+    "text": "FCFS, or First Come First Service, is basically an operating system scheduling method that performs queued processes and requests in the order in which they arrive. It's the most straightforward and basic CPU scheduling technique. Processes seeking the CPU first receive the CPU allocation in this method. A FIFO queue is leveraged to handle this.",
+    "position": "de",
+    "section": "Big Data"
+  },
+  {
+    "id": "de0054",
+    "question": "Mention default port numbers on which the task tracker, NameNode, and job tracker run in Hadoop",
+    "text": "Task Tracker: 50060\nNameNode: 50070\nJobTracker: 50030",
+    "position": "de",
+    "section": "Big Data"
+  },
+  {
+    "id": "de0055",
+    "question": "How to define the distance between two nodes in Hadoop?",
+    "text": "The network is represented as a tree in Hadoop. The distance between two nodes is the total of their ancestor distances.",
+    "position": "de",
+    "section": "Big Data"
+  },
+  {
+    "id": "de0056",
+    "question": "Why use commodity hardware in Hadoop?",
+    "text": "The idea behind using Commodity Hardware in Hadoop is simple: you've got a few servers and distribute the load among them. It is possible because of Hadoop MapReduce, a fantastic component of this setup.\nIn Hadoop, commodity hardware is put on all servers, and it then distributes data across them. Every server will eventually hold a piece of data. No server, however, will contain everything.",
+    "position": "de",
+    "section": "Big Data"
+  },
+  {
+    "id": "de0057",
+    "question": "Define Replication Factor in HDFS",
+    "text": "The replication factor specifies the number of copies of a block that should be stored in your cluster. Because the replication factor is set to three by default, every file you create in the Hadoop Distributed File System will be having a replication factor of three, and each block in the file will be duplicated to three distinct nodes in your cluster.",
+    "position": "de",
+    "section": "Big Data"
+  },
+  {
+    "id": "de0058",
+    "question": "What data is stored in NameNode?",
+    "text": "NameNode serves as the master of the system. It monitors the metadata and file system tree for every folder and file on the system. The information of metadata is saved in two files: 'Edit Log' and 'Namespace image'.",
+    "position": "de",
+    "section": "Big Data"
+  },
+  {
+    "id": "de0059",
+    "question": "What do you mean by Rack Awareness?",
+    "text": "Rack awareness in Hadoop refers to recognising how various data nodes are dispersed across racks or knowing the cluster architecture in the Hadoop cluster.",
+    "position": "de",
+    "section": "Big Data"
+  },
+  {
+    "id": "de0060",
+    "question": "What are the functions of Secondary NameNode?",
+    "text": "The following are some of the functions of the secondary NameNode:\nKeeps a copy of the FsImage file and an edit log.\nApply edits log entries to the FsImage file on a regular basis and renews the edits log. It then sends this modified FsImage file directly to NameNode so that it does not have to re-address the EditLog records at the time of the startup process. As a result, Secondary NameNode speeds up the NameNode startup procedure.\nIf NameNode fails, File System information can be retrieved from the last stored FsImage on the Secondary NameNode, however, the Secondary NameNode cannot take over the functionality of the Primary NameNode.\nFile system information is checked for accuracy.",
+    "position": "de",
+    "section": "Big Data"
+  },
+  {
+    "id": "de0061",
+    "question": "What are the basic phases of reducer in Hadoop?",
+    "text": "A Reducer in Hadoop has three major phases:\nShuffle: Reducer duplicates the sorted output from each Mapper during this step.\nSort: During this stage, the Hadoop framework sorts the input to the Reducer by the same key. This step employs merge sort. Sometimes the shuffle and sort processes occur concurrently.\nReduce: It's the stage at which the output values associated with a key are lowered to produce an output result. Reducer output is not re-sorted.",
+    "position": "de",
+    "section": "Big Data"
+  },
+  {
+    "id": "de0062",
+    "question": "Why does Hadoop use Context objects?",
+    "text": "Context object permits the Mapper/Reducer to communicate with the remainder of the Hadoop system. It contains task configuration data and interfaces that allow it to send output. It can be used by programs to report progress.",
+    "position": "de",
+    "section": "Big Data"
+  },
+  {
+    "id": "de0063",
+    "question": "Define Combiner in Hadoop",
+    "text": "The Combiner, also known as the \"Mini-Reducer,\" summarises the Mapper output record using the same Key before handing it to the Reducer.\nWhen we execute a MapReduce task on a huge dataset. As a result, Mapper creates vast amounts of intermediate data. The framework then forwards this intermediate data to the Reducer for further processing.\nThis causes massive network congestion. The Hadoop framework has a function called Combiner, which helps to reduce network congestion.\nCombiner, sometimes known as a \"Mini-Reducer,\" is responsible for processing the output data from the Mapper before transferring it to the Reducer. It is executed after the mapper but before the reducer. Its application is discretionary.",
+    "position": "de",
+    "section": "Big Data"
+  },
+  {
+    "id": "de0064",
+    "question": "What is the default replication factor available in HDFS? What does it indicate?",
+    "text": "HDFS's replication factor is set to 3 by default. This implies that each block will have two additional copies stored on a different DataNode in the cluster.",
+    "position": "de",
+    "section": "Big Data"
+  },
+  {
+    "id": "de0065",
+    "question": "What do you mean by Data Locality in Hadoop?",
+    "text": "Data locality in Hadoop brings computation near where the real data is on the node rather than transporting massive data to computation. It lowers network congestion while increasing total system throughput.",
+    "position": "de",
+    "section": "Big Data"
+  },
+  {
+    "id": "de0066",
+    "question": "Define Balancer in HDFS",
+    "text": "The HDFS Balancer is basically a utility for balancing data across an HDFS cluster's storage devices. The HDFS Balancer was initially designed to run slowly so that balancing operations did not interfere with regular cluster activity and job execution.",
+    "position": "de",
+    "section": "Big Data"
+  },
+  {
+    "id": "de0067",
+    "question": "Explain Safe Mode in HDFS",
+    "text": "The Hadoop Distributed File System (HDFS) cluster's safe mode for the NameNode is read-only. You cannot change or block the file system while in Safe Mode. When the DataNodes indicate that most file system blocks are accessible, the NameNode exits Safe Mode automatically.",
+    "position": "de",
+    "section": "Big Data"
+  },
+  {
+    "id": "de0068",
+    "question": "What is the importance of Distributed Cache in Apache Hadoop?",
+    "text": "In Hadoop, the distributed cache is a method of copying archives or small files to worker nodes in real time. This is done by Hadoop so that these worker nodes may use them when conducting a job. To conserve network traffic, files are copied just once per job.",
+    "position": "de",
+    "section": "Big Data"
+  },
+  {
+    "id": "de0069",
+    "question": "What is Metastore in Hive?",
+    "text": "Metastore in Hive is the component that maintains all of the warehouse's structural information, including serializers and deserializers required to read and write data, column and column type information, and the accompanying HDFS files where the data is kept.",
+    "position": "de",
+    "section": "Big Data"
+  },
+  {
+    "id": "de0070",
+    "question": "What do you mean by SerDe in Hive?",
+    "text": "Athena communicates with data in multiple forms via a SerDe (Serializer/Deserializer). The SerDe you provide defines the table schema, not the DDL. In other words, the SerDe can overrule the DDL settings you give when you create your table in Athena.",
+    "position": "de",
+    "section": "Big Data"
+  },
+  {
+    "id": "de0071",
+    "question": "List the components available in the Hive data model",
+    "text": "The following components are included in Hive data models:\nClusters or buckets\nPartitions\nTables\nDatabases",
+    "position": "de",
+    "section": "Big Data"
+  },
+  {
+    "id": "de0072",
+    "question": "Explain the use of Hive in the Hadoop ecosystem",
+    "text": "Hive is a data warehousing and an ETL solution for querying and analysing massive datasets stored in the Hadoop environment. Hive has three essential purposes in Hadoop: data summarisation, querying and analysing unstructured and semi-structured data.",
+    "position": "de",
+    "section": "Big Data"
+  },
+  {
+    "id": "de0073",
+    "question": "List various complex data types/collections supported by Hive",
+    "text": "The complex data collections or types supported by Hive are as follows:\nArray\nMap\nStruct\nUnion",
+    "position": "de",
+    "section": "Big Data"
+  },
+  {
+    "id": "de0074",
+    "question": "Explain how the .hiverc file in Hive is used",
+    "text": "The initialisation file is called hiverc. This file is loaded when we launch the Command Line Interface for Hive. In this file, we may specify the starting values of parameters.",
+    "position": "de",
+    "section": "Big Data"
+  },
+  {
+    "id": "de0075",
+    "question": "Is it possible to create multiple tables in Hive for a single data file?",
+    "text": "Hive permits you to write data to numerous tables or folders simultaneously.",
+    "position": "de",
+    "section": "Big Data"
+  },
+  {
+    "id": "de0076",
+    "question": "Explain different SerDe implementations available in Hive",
+    "text": "For IO, Hive employs the SerDe interface. The interface supports both serialization and deserialization, as well as serialisation results as separate fields for processing.\nHive can read data from a table and also write it back to the Hadoop Distributed File System in any personalised format using a SerDe. Any individual with a computer may create their SerDe for their data types.",
+    "position": "de",
+    "section": "Big Data"
+  },
+  {
+    "id": "de0077",
+    "question": "List table-generating functions available in Hive",
+    "text": "The table-generating functions that are available in Hive are as follows:\nexplode(ARRAY)\nexplode(MAP)\ninline(ARRAY<STRUCT[,STRUCT]>)\nexplode(array a)\njson_tuple(jsonStr, k1, k2, \u2026)\nparse_url_tuple(url, p1, p2, \u2026)\nposexplode(ARRAY)\nstack(INT n, v_1, v_2, \u2026, v_k)",
+    "position": "de",
+    "section": "Big Data"
+  },
+  {
+    "id": "de0078",
+    "question": "What is a Skewed table in Hive?",
+    "text": "A Skewed table in Hive has values in considerable quantities compared to other data. The Skew data is kept in a separate file, while the remainder is kept in another.",
+    "position": "de",
+    "section": "Database Systems and SQL"
+  },
+  {
+    "id": "de0079",
+    "question": "List objects created by CREATE statements in MySQL",
+    "text": "Using the CREATE statement, the following objects are created:\nEVENT\nDATABASE\nVIEW\nUSER\nTRIGGER\nTABLE\nINDEX\nFUNCTION\nPROCEDURE",
+    "position": "de",
+    "section": "Database Systems and SQL"
+  },
+  {
+    "id": "de0080",
+    "question": "How to see the database structure in MySQL?",
+    "text": "To display the database structure and its properties in MySQL, you need to use the DESCRIBE function:\nDESCRIBE table_name; OR DESC table_name;",
+    "position": "de",
+    "section": "Database Systems and SQL"
+  },
+  {
+    "id": "de0081",
+    "question": "How to search for a specific String in the MySQL table column?",
+    "text": "The location of the first occurrence of a string within a string is returned by MySQL LOCATE(). These strings are both supplied as arguments. An optional parameter can be used to determine where the search should begin in the string (i.e. the text to be searched).",
+    "position": "de",
+    "section": "Database Systems and SQL"
+  },
+  {
+    "id": "de0082",
+    "question": "Explain how data analytics and big data can increase company revenue",
+    "text": "Big data analytics enables businesses to develop new goods based on consumer demands and preferences. Because these things help organisations to generate more money, firms are turning to big data analytics. Big data analytics may help businesses raise their income by 5-20%. Furthermore, it allows businesses to understand their competitors better.",
+    "position": "de",
+    "section": "Database Systems and SQL"
+  },
+  {
+    "id": "de0083",
+    "question": "What is data engineering?",
+    "text": "Data engineering is the practice of designing, building, and maintaining systems for collecting, storing, and analyzing large volumes of data. It involves creating data pipelines, optimizing data storage, and ensuring data quality and accessibility for data scientists and analysts.",
+    "position": "de",
+    "section": "Basic Data Engineering Interview Questions"
+  },
+  {
+    "id": "de0084",
+    "question": "What are the main responsibilities of a data engineer?",
+    "text": "The main responsibilities of a data engineer include:\nDesigning and implementing data pipelines\nCreating and maintaining data warehouses\nEnsuring data quality and consistency\nOptimizing data storage and retrieval systems\nCollaborating with data scientists and analysts to support their data needs\nImplementing data security and governance measures",
+    "position": "de",
+    "section": "Basic Data Engineering Interview Questions"
+  },
+  {
+    "id": "de0085",
+    "question": "What is the difference between a data engineer and a data scientist?",
+    "text": "While both roles work with data, their focus and responsibilities differ:\nData engineers primarily deal with the infrastructure and systems for data management, ensuring data is accessible, reliable, and efficient to use.\nData scientists focus on analyzing data, creating models, and extracting insights to solve business problems.",
+    "position": "de",
+    "section": "Basic Data Engineering Interview Questions"
+  },
+  {
+    "id": "de0086",
+    "question": "What is a data pipeline?",
+    "text": "A data pipeline is a series of processes that move data from various sources to a destination system, often involving transformation and processing steps along the way. It ensures that data flows smoothly from its origin to where it\u2019s needed for analysis or other purposes.",
+    "position": "de",
+    "section": "Basic Data Engineering Interview Questions"
+  },
+  {
+    "id": "de0087",
+    "question": "What are some common challenges in data engineering?",
+    "text": "Common challenges in data engineering include:\nHandling large volumes of data efficiently\nEnsuring data quality and consistency\nManaging real-time data processing\nScaling systems to accommodate growing data needs\nIntegrating diverse data sources and formats\nMaintaining data security and privacy",
+    "position": "de",
+    "section": "Database Systems and SQL"
+  },
+  {
+    "id": "de0088",
+    "question": "What is a relational database?",
+    "text": "A relational database is a type of database that organizes data into tables with predefined relationships between them. It uses SQL (Structured Query Language) for managing and querying the data.",
+    "position": "de",
+    "section": "Database Systems and SQL"
+  },
+  {
+    "id": "de0089",
+    "question": "What are the main differences between SQL and NoSQL databases?",
+    "text": "A: Key differences include:\nStructure: SQL databases use a structured schema, while NoSQL databases are schema-less or have a flexible schema.\nScalability: NoSQL databases are generally more scalable horizontally, while SQL databases often scale vertically.\nData model: SQL databases use tables and rows, while NoSQL databases can use various models like document, key-value, or graph.\nACID compliance: SQL databases typically provide ACID guarantees, while NoSQL databases may sacrifice some ACID properties for performance and scalability.",
+    "position": "de",
+    "section": "Database Systems and SQL"
+  },
+  {
+    "id": "de0090",
+    "question": "What is normalization in database design?",
+    "text": "Normalization is the process of organizing data in a database to reduce redundancy and improve data integrity. It involves breaking down larger tables into smaller, more focused tables and establishing relationships between them.",
+    "position": "de",
+    "section": "Database Systems and SQL"
+  },
+  {
+    "id": "de0091",
+    "question": "Explain the concept of database indexing",
+    "text": "Database indexing is a technique used to improve the speed of data retrieval operations. It creates a data structure that allows the database to quickly locate specific rows based on the values in one or more columns, without having to scan the entire table.",
+    "position": "de",
+    "section": "Database Systems and SQL"
+  },
+  {
+    "id": "de0092",
+    "question": "What is a stored procedure?",
+    "text": "A stored procedure is a precompiled collection of SQL statements that are stored in the database and can be executed with a single call. They can accept parameters, perform complex operations, and return results, improving performance and code reusability.\nBig Data Technologies",
+    "position": "de",
+    "section": "Database Systems and SQL"
+  },
+  {
+    "id": "de0093",
+    "question": "What is Hadoop?",
+    "text": "Hadoop is an open-source framework designed for distributed storage and processing of large datasets across clusters of computers. It consists of two main components: the Hadoop Distributed File System (HDFS) for storage and MapReduce for processing.",
+    "position": "de",
+    "section": "Database Systems and SQL"
+  },
+  {
+    "id": "de0094",
+    "question": "Explain the concept of MapReduce",
+    "text": "MapReduce is a programming model and processing technique for distributed computing. It consists of two main phases:\nMap: Divides the input data into smaller chunks and processes them in parallel\nReduce: Aggregates the results from the Map phase to produce the final output",
+    "position": "de",
+    "section": "Database Systems and SQL"
+  },
+  {
+    "id": "de0095",
+    "question": "What is Apache Spark?",
+    "text": "Apache Spark is a fast, in-memory data processing engine with elegant and expressive development APIs to allow data workers to efficiently execute streaming, machine learning or SQL workloads that require fast iterative access to datasets.",
+    "position": "de",
+    "section": "Database Systems and SQL"
+  },
+  {
+    "id": "de0096",
+    "question": "How does Spark differ from Hadoop MapReduce? A: Key differences include:",
+    "text": "Speed: Spark is generally faster due to in-memory processing\nEase of use: Spark offers more user-friendly APIs in multiple languages\nVersatility: Spark supports various workloads beyond batch processing, including streaming and machine learning\nIterative processing: Spark is more efficient for iterative algorithms common in machine learning",
+    "position": "de",
+    "section": "Database Systems and SQL"
+  },
+  {
+    "id": "de0097",
+    "question": "What is Apache Kafka?",
+    "text": "Apache Kafka is a distributed streaming platform that allows for publishing and subscribing to streams of records, storing streams of records in a fault-tolerant way, and processing streams of records as they occur.",
+    "position": "de",
+    "section": "Data Warehousing and ETL"
+  },
+  {
+    "id": "de0098",
+    "question": "What is a data warehouse?",
+    "text": "A data warehouse is a centralized repository that stores large amounts of structured data from various sources in an organization. It is designed for query and analysis rather than for transaction processing.",
+    "position": "de",
+    "section": "Data Warehousing and ETL"
+  },
+  {
+    "id": "de0099",
+    "question": "Explain the ETL process",
+    "text": "ETL stands for Extract, Transform, Load. It is a process used to collect data from various sources, transform it to fit operational needs, and load it into the end target, usually a data warehouse. The steps are:\nExtract: Retrieve data from source systems\nTransform: Clean, validate, and convert the data into a suitable format\nLoad: Insert the transformed data into the target system",
+    "position": "de",
+    "section": "Data Warehousing and ETL"
+  },
+  {
+    "id": "de0100",
+    "question": "What is the difference between a data lake and a data warehouse? A: Key differences include:",
+    "text": "Data structure: Data warehouses store structured data, while data lakes can store structured, semi-structured, and unstructured data\nPurpose: Data warehouses are optimized for analysis, while data lakes serve as a repository for raw data\nSchema: Data warehouses use schema-on-write, while data lakes use schema-on-read\nUsers: Data warehouses are typically used by business analysts, while data lakes are often used by data scientists",
+    "position": "de",
+    "section": "Data Warehousing and ETL"
+  },
+  {
+    "id": "de0101",
+    "question": "What is the slowly changing dimension (SCD)?",
+    "text": "Slowly changing dimension (SCD) is a concept in data warehousing that describes how to handle changes to dimension data over time. There are different types of SCDs, with the most common being:\nType 1: Overwrite the old value\nType 2: Create a new row with the changed data\nType 3: Add a new column to track changes",
+    "position": "de",
+    "section": "Data Warehousing and ETL"
+  },
+  {
+    "id": "de0102",
+    "question": "What is data mart?",
+    "text": "A data mart is a subset of a data warehouse that focuses on a specific business line or department. It contains summarized and relevant data for a particular group of users or a specific area of the business.",
+    "position": "de",
+    "section": "Cloud Computing for Data Engineering"
+  },
+  {
+    "id": "de0103",
+    "question": "What are the main advantages of cloud computing for data engineering?",
+    "text": "Key advantages include:\nScalability: Easily scale resources up or down based on demand\nCost-effectiveness: Pay only for the resources you use\nFlexibility: Access to a wide range of services and tools\nReliability: Built-in redundancy and disaster recovery options\nGlobal reach: Deploy resources in multiple geographic regions",
+    "position": "de",
+    "section": "Cloud Computing for Data Engineering"
+  },
+  {
+    "id": "de0104",
+    "question": "What is Amazon S3?",
+    "text": "Amazon S3 (Simple Storage Service) is an object storage service offered by Amazon Web Services (AWS). It provides scalable, durable, and highly available storage for various types of data, making it popular for data lakes and backup solutions.",
+    "position": "de",
+    "section": "Cloud Computing for Data Engineering"
+  },
+  {
+    "id": "de0105",
+    "question": "Explain the concept of a data lake in the context of cloud computing",
+    "text": "A data lake in the cloud is a centralized repository that allows you to store all your structured and unstructured data at any scale. It\u2019s typically built using cloud storage services like Amazon S3 or Azure Data Lake Storage, providing a flexible and cost-effective solution for big data analytics and machine learning projects.\n24 What is Azure Synapse Analytics?\nAzure Synapse Analytics is a limitless analytics service that brings together data integration, enterprise data warehousing, and big data analytics. It allows you to query data on your terms, using either serverless or dedicated resources at scale.",
+    "position": "de",
+    "section": "Cloud Computing for Data Engineering"
+  },
+  {
+    "id": "de0106",
+    "question": "What are some popular programming languages used in data engineering?",
+    "text": "A: Popular programming languages for data engineering include:\nPython\nSQL\nJava\nScala\nR",
+    "position": "de",
+    "section": "Cloud Computing for Data Engineering"
+  },
+  {
+    "id": "de0107",
+    "question": "Why is Python popular in data engineering?",
+    "text": "Python is popular in data engineering due to:\nEase of use and readability\nRich ecosystem of libraries and frameworks for data processing (e.g., Pandas, NumPy)\nSupport for big data technologies (e.g., PySpark)\nIntegration with various data sources and APIs\nStrong community support and documentation",
+    "position": "de",
+    "section": "Cloud Computing for Data Engineering"
+  },
+  {
+    "id": "de0108",
+    "question": "What is PySpark?",
+    "text": "PySpark is the Python API for Apache Spark. It allows you to write Spark applications using Python, combining the simplicity of Python with the power of Spark for distributed data processing.",
+    "position": "de",
+    "section": "Cloud Computing for Data Engineering"
+  },
+  {
+    "id": "de0109",
+    "question": "What are some key features of Scala for data engineering?",
+    "text": "Key features of Scala for data engineering include:\nCompatibility with Java libraries and frameworks\nStrong static typing, which can catch errors at compile-time\nConcise syntax for functional programming\nNative language for Apache Spark\nGood performance for large-scale data processing",
+    "position": "de",
+    "section": "Cloud Computing for Data Engineering"
+  },
+  {
+    "id": "de0110",
+    "question": "How does R compare to Python for data engineering tasks?",
+    "text": "While R is more popular in statistical computing and data analysis, it can also be used for data engineering tasks. Compared to Python:\nR has stronger statistical and visualization capabilities out-of-the-box\nPython has a more general-purpose nature and is often easier to integrate with other systems\nBoth have packages for data manipulation (e.g., dplyr in R, Pandas in Python)\nPython is generally faster for large-scale data processing\nR has a steeper learning curve for those without a statistical background",
+    "position": "de",
+    "section": "Data Modeling and Design"
+  },
+  {
+    "id": "de0111",
+    "question": "What is data modeling?",
+    "text": "Data modeling is the process of creating a visual representation of data structures and relationships within a system. It helps in understanding, organizing, and standardizing data elements and their relationships.",
+    "position": "de",
+    "section": "Data Modeling and Design"
+  },
+  {
+    "id": "de0112",
+    "question": "What are the three main types of data models?",
+    "text": "The three main types of data models are:\nConceptual data model: High-level view of data structures and relationships\nLogical data model: Detailed view of data structures, independent of any specific database management system\nPhysical data model: Representation of the data model as implemented in a specific database system",
+    "position": "de",
+    "section": "Data Modeling and Design"
+  },
+  {
+    "id": "de0113",
+    "question": "What is star schema?",
+    "text": "Star schema is a data warehouse schema where a central fact table is surrounded by dimension tables. It\u2019s called a star schema because the diagram resembles a star, with the fact table at the center and dimension tables as points.",
+    "position": "de",
+    "section": "Data Modeling and Design"
+  },
+  {
+    "id": "de0114",
+    "question": "What is snowflake schema?",
+    "text": "Snowflake schema is a variation of the star schema where dimension tables are normalized into multiple related tables. This creates a structure that looks like a snowflake, with the fact table at the center and increasingly granular dimension tables branching out.",
+    "position": "de",
+    "section": "Data Modeling and Design"
+  },
+  {
+    "id": "de0115",
+    "question": "What are the advantages and disadvantages of denormalization?",
+    "text": "Advantages of denormalization:\nImproved query performance\nSimplifies queries\nReduces the need for joins\nDisadvantages of denormalization:\nIncreased data redundancy\nMore complex data updates and inserts\nPotential data inconsistencies",
+    "position": "de",
+    "section": "Data Processing and Analytics"
+  },
+  {
+    "id": "de0116",
+    "question": "What is batch processing?",
+    "text": "Batch processing is a method of running high-volume, repetitive data jobs where a group of transactions is collected over time, then processed all at once. It\u2019s efficient for processing large amounts of data when immediate results are not required.",
+    "position": "de",
+    "section": "Data Processing and Analytics"
+  },
+  {
+    "id": "de0117",
+    "question": "What is stream processing?",
+    "text": "Stream processing is a method of processing data continuously as it is generated or received. It allows for real-time or near real-time analysis and action on incoming data streams.",
+    "position": "de",
+    "section": "Data Processing and Analytics"
+  },
+  {
+    "id": "de0118",
+    "question": "What is the Lambda architecture?",
+    "text": "The Lambda architecture is a data processing architecture designed to handle massive quantities of data by taking advantage of both batch and stream processing methods. It consists of three layers:\nBatch layer: Manages the master dataset and pre-computes batch views\nSpeed layer: Handles real-time data processing\nServing layer: Responds to queries by combining results from batch and speed layers",
+    "position": "de",
+    "section": "Data Processing and Analytics"
+  },
+  {
+    "id": "de0119",
+    "question": "What is Apache Flink?",
+    "text": "Apache Flink is an open-source stream processing framework for distributed, high-performing, always-available, and accurate data streaming applications. It provides precise control of time and state, allowing for consistent and accurate results even in the face of out-of-order or late-arriving data.",
+    "position": "de",
+    "section": "Data Processing and Analytics"
+  },
+  {
+    "id": "de0120",
+    "question": "Explain the concept of data partitioning",
+    "text": "Data partitioning is the process of dividing a large dataset into smaller, more manageable pieces called partitions. This technique is used to improve query performance, enable parallel processing, and manage large datasets more effectively. Common partitioning strategies include:\nRange partitioning\nHash partitioning\nList partitioning",
+    "position": "de",
+    "section": "Data Security and Governance"
+  },
+  {
+    "id": "de0121",
+    "question": "What is data governance?",
+    "text": "Data governance is a set of processes, roles, policies, standards, and metrics that ensure the effective and efficient use of information in enabling an organization to achieve its goals. It establishes the processes and responsibilities for data quality, security, and compliance.",
+    "position": "de",
+    "section": "Data Security and Governance"
+  },
+  {
+    "id": "de0122",
+    "question": "What is data encryption?",
+    "text": "Data encryption is the process of converting data into a code to prevent unauthorized access. It involves using an algorithm to transform the original data (plaintext) into an unreadable format (ciphertext) that can only be decrypted with a specific key.",
+    "position": "de",
+    "section": "Data Security and Governance"
+  },
+  {
+    "id": "de0123",
+    "question": "What is GDPR and how does it affect data engineering?",
+    "text": "GDPR (General Data Protection Regulation) is a regulation in EU law on data protection and privacy. For data engineering, it impacts:\nData collection and storage practices\nData processing and usage\nData subject rights (e.g., right to be forgotten)\nData breach notification requirements\nCross-border data transfers",
+    "position": "de",
+    "section": "Data Security and Governance"
+  },
+  {
+    "id": "de0124",
+    "question": "What is data masking?",
+    "text": "Data masking is a technique used to create a structurally similar but inauthentic version of an organization\u2019s data. It\u2019s used to protect sensitive data while providing a functional substitute for purposes such as software testing and user training.",
+    "position": "de",
+    "section": "Data Security and Governance"
+  },
+  {
+    "id": "de0125",
+    "question": "What is role-based access control (RBAC)?",
+    "text": "Role-based access control (RBAC) is a method of regulating access to computer or network resources based on the roles of individual users within an organization. In RBAC, permissions are associated with roles, and users are assigned to appropriate roles, simplifying the management of user rights.",
+    "position": "de",
+    "section": "Soft Skills and Problem-Solving"
+  },
+  {
+    "id": "de0126",
+    "question": "How do you approach learning new technologies in the rapidly evolving field of data engineering?",
+    "text": "Possible approaches include:\nRegularly reading tech blogs and articles\nParticipating in online courses and certifications\nAttending conferences and workshops\nExperimenting with new tools in personal projects\nCollaborating with colleagues and sharing knowledge\nFollowing industry experts on social media",
+    "position": "de",
+    "section": "Soft Skills and Problem-Solving"
+  },
+  {
+    "id": "de0127",
+    "question": "How do you ensure data quality in your projects?",
+    "text": "Strategies for ensuring data quality include:\nImplementing data validation checks at ingestion\nUsing data profiling tools to understand data characteristics\nEstablishing clear data quality metrics and monitoring them\nImplementing data cleansing processes\nConducting regular data audits\nEstablishing a data governance framework",
+    "position": "de",
+    "section": "Soft Skills and Problem-Solving"
+  },
+  {
+    "id": "de0128",
+    "question": "How do you handle conflicts in a team environment?",
+    "text": "Strategies for handling conflicts include:\nActive listening to understand all perspectives\nFocusing on the issue, not personal differences\nSeeking common ground and shared goals\nProposing and discussing potential solutions\nEscalating to management when necessary, with proposed resolutions",
+    "position": "de",
+    "section": "Soft Skills and Problem-Solving"
+  },
+  {
+    "id": "de0129",
+    "question": "How do you prioritize tasks in a data engineering project?",
+    "text": "Prioritization strategies might include:\nAssessing business impact and urgency of each task\nConsidering dependencies between tasks\nEvaluating resource availability and constraints\nUsing techniques like the Eisenhower Matrix or MoSCoW method\nRegular communication with stakeholders to align priorities",
+    "position": "de",
+    "section": "Soft Skills and Problem-Solving"
+  },
+  {
+    "id": "de0130",
+    "question": "How do you stay updated with the latest trends and best practices in data engineering?",
+    "text": "Methods to stay updated include:\nFollowing relevant blogs, podcasts, and YouTube channels\nParticipating in online communities (e.g., Stack Overflow, Reddit)\nAttending webinars and virtual conferences\nSubscribing to industry newsletters\nNetworking with other professionals in the field\nExperimenting with new tools and technologies in personal projects",
+    "position": "de",
+    "section": "Soft Skills and Problem-Solving"
+  },
+  {
+    "id": "de0131",
+    "question": "How would you design a system to handle real-time streaming data?",
+    "text": "When designing a system for real-time streaming data, consider:\nUsing a distributed streaming platform like Apache Kafka or Amazon Kinesis\nImplementing stream processing with tools like Apache Flink or Spark Streaming\nEnsuring low-latency data ingestion and processing\nDesigning for fault tolerance and scalability\nImplementing proper error handling and data validation\nConsidering data storage for both raw and processed data",
+    "position": "de",
+    "section": "Soft Skills and Problem-Solving"
+  },
+  {
+    "id": "de0132",
+    "question": "What strategies do you use for optimizing query performance in large datasets?",
+    "text": "Strategies for optimizing query performance include:\nProper indexing of frequently queried columns\nPartitioning large tables\nUsing materialized views for complex, frequently-run queries\nQuery optimization and rewriting\nImplementing caching mechanisms\nUsing columnar storage formats for analytical workloads\nLeveraging distributed computing for large-scale data processing",
+    "position": "de",
+    "section": "Soft Skills and Problem-Solving"
+  },
+  {
+    "id": "de0133",
+    "question": "How do you approach data pipeline testing?",
+    "text": "Approaches to data pipeline testing include:\nUnit testing individual components\nIntegration testing to ensure components work together\nEnd-to-end testing of the entire pipeline\nData validation testing to ensure data integrity\nPerformance testing under various load conditions\nFault injection testing to verify error handling\nRegression testing after making changes",
+    "position": "de",
+    "section": "Soft Skills and Problem-Solving"
+  },
+  {
+    "id": "de0134",
+    "question": "What is your experience with data versioning and how do you implement it?",
+    "text": "Data versioning involves tracking changes to datasets over time. Implementation strategies include:\nUsing version control systems for code and configuration files\nImplementing slowly changing dimensions in data warehouses\nUsing data lake technologies that support versioning (e.g., Delta Lake)\nMaintaining metadata about dataset versions\nImplementing a robust backup and restore strategy",
+    "position": "de",
+    "section": "Soft Skills and Problem-Solving"
+  },
+  {
+    "id": "de0135",
+    "question": "How do you handle data skew in distributed processing systems?",
+    "text": "Strategies for handling data skew include:\nIdentifying and analyzing skewed keys\nImplementing salting or hashing techniques to distribute data more evenly\nUsing broadcast joins for small datasets\nAdjusting partition sizes or using custom partitioners\nImplementing two-phase aggregation for skewed aggregations\nConsidering alternative data models or schema designs",
+    "position": "de",
+    "section": "Soft Skills and Problem-Solving"
+  },
+  {
+    "id": "de0136",
+    "question": "Explain the concept of data lineage and why it\u2019s important",
+    "text": "Data lineage refers to the lifecycle of data, including its origins, movements, transformations, and impacts. It\u2019s important because it:\nHelps in understanding data provenance and quality\nFacilitates impact analysis for proposed changes\nAids in regulatory compliance and auditing\nSupports troubleshooting and debugging of data issues\nEnhances data governance and metadata management",
+    "position": "de",
+    "section": "Soft Skills and Problem-Solving"
+  },
+  {
+    "id": "de0137",
+    "question": "How do you approach capacity planning for data infrastructure?",
+    "text": "Capacity planning involves:\nAnalyzing current resource usage and growth trends\nForecasting future data volumes and processing requirements\nConsidering peak load scenarios and seasonality\nEvaluating different scaling options (vertical vs. horizontal)\nAssessing costs and budget constraints\nPlanning for redundancy and fault tolerance\nConsidering cloud vs. on-premises infrastructure options",
+    "position": "de",
+    "section": "Soft Skills and Problem-Solving"
+  },
+  {
+    "id": "de0138",
+    "question": "What is your experience with data catalogs and metadata management?",
+    "text": "Data catalogs and metadata management involve:\nImplementing tools for documenting datasets, their schemas, and relationships\nEstablishing processes for metadata creation and maintenance\nIntegrating metadata across different systems and tools\nImplementing data discovery and search capabilities\nSupporting data governance and compliance initiatives\nFacilitating self-service analytics for business users",
+    "position": "de",
+    "section": "Soft Skills and Problem-Solving"
+  },
+  {
+    "id": "de0139",
+    "question": "How do you handle schema evolution in data pipelines?",
+    "text": "Approaches to handling schema evolution include:\nUsing schema-on-read formats like Parquet or Avro\nImplementing backward and forward compatibility in schema designs\nVersioning schemas and maintaining compatibility between versions\nUsing schema registries for centralized schema management\nImplementing data migration strategies for major schema changes\nTesting schema changes thoroughly before deployment",
+    "position": "de",
+    "section": "Soft Skills and Problem-Solving"
+  },
+  {
+    "id": "de0140",
+    "question": "What is your approach to monitoring and alerting in data engineering systems?",
+    "text": "Effective monitoring and alerting involves:\nImplementing comprehensive logging across all system components\nSetting up real-time monitoring dashboards\nDefining key performance indicators (KPIs) and service level objectives (SLOs)\nImplementing proactive alerting for potential issues\nUsing anomaly detection techniques for identifying unusual patterns\nEstablishing an incident response process\nConducting regular system health checks and audits",
+    "position": "de",
+    "section": "Soft Skills and Problem-Solving"
+  },
+  {
+    "id": "de0141",
+    "question": "How do you ensure data consistency in distributed systems?",
+    "text": "A: Strategies for ensuring data consistency include:\nImplementing strong consistency models where necessary\nUsing eventual consistency for improved performance in certain scenarios\nImplementing distributed transactions when needed\nUsing techniques like two-phase commit or saga pattern for complex operations\nImplementing idempotent operations to handle duplicate requests\nDesigning for conflict resolution in multi-master systems",
+    "position": "de",
+    "section": "Soft Skills and Problem-Solving"
+  },
+  {
+    "id": "de0142",
+    "question": "What is your experience with data modeling for NoSQL databases?",
+    "text": "Data modeling for NoSQL databases involves:\nUnderstanding the specific NoSQL database type (document, key-value, column-family, graph)\nDesigning for query patterns rather than normalized data structures\nConsidering denormalization and data duplication for performance\nPlanning for scalability and partitioning\nImplementing appropriate indexing strategies\nHandling schema flexibility and evolution",
+    "position": "de",
+    "section": "Soft Skills and Problem-Solving"
+  },
+  {
+    "id": "de0143",
+    "question": "How do you approach data quality assurance in ETL processes?",
+    "text": "Data quality assurance in ETL involves:\nImplementing data validation rules at the source and target\nPerforming data profiling to understand data characteristics\nImplementing data cleansing and standardization processes\nUsing data quality scorecards to track improvements over time\nImplementing data reconciliation checks between source and target\nEstablishing a process for handling and resolving data quality issues",
+    "position": "de",
+    "section": "Soft Skills and Problem-Solving"
+  },
+  {
+    "id": "de0144",
+    "question": "What strategies do you use for managing technical debt in data engineering projects?",
+    "text": "Strategies for managing technical debt include:\nRegular code reviews and refactoring sessions\nImplementing CI/CD practices for consistent deployments\nMaintaining comprehensive documentation\nPrioritizing critical updates and migrations\nAllocating time for system improvements in project planning\nConducting periodic architecture reviews\nImplementing automated testing to catch regressions",
+    "position": "de",
+    "section": "Soft Skills and Problem-Solving"
+  },
+  {
+    "id": "de0145",
+    "question": "How do you handle data privacy and compliance requirements in your projects?",
+    "text": "Approaches to handling data privacy and compliance include:\nImplementing data classification and tagging\nApplying appropriate data masking and encryption techniques\nImplementing role-based access control (RBAC)\nMaintaining audit logs for data access and modifications\nImplementing data retention and deletion policies\nConducting regular privacy impact assessments\nStaying updated with relevant regulations (e.g., GDPR, CCPA)",
+    "position": "de",
+    "section": "Soft Skills and Problem-Solving"
+  }
+]

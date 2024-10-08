@@ -37,7 +37,7 @@ Thanks to LLM ZoomCamp for the reason to keep learning new cool tools!
 
 ## 🔢 Dataset
 
-I collected and processed questions with answers from sources like articles on respected Data professions related websites, and transform them into a [dataset](/data). Now it includes 2 .csv files - with Data Engineering and Machine Learning topics. And I plan to load some more QnAs universal for Data related positions. I prepared app UI and backend extensible.
+I collected questions with answers from sources like articles on respected Data professions related websites, and transformed them into a [dataset](/data). Now it includes 2 .csv files - with Data Engineering and Machine Learning topics. And I plan to load some more QnAs universal for Data related positions. I prepared app UI and backend extensible.
 
 **Structure**: id, question, text (=answer), position, section.
 
@@ -126,7 +126,7 @@ You can monitor app performance in Grafana dashboard
 1. Run `bash init_gr.sh` to create dashboard.
 ![Grafana init_gr](/screenshots/init_gr.png)
 
-2. As with streamlit switch to ports tab and click on link with port 3000 (🌐 icon). After loading Grafana use default credentials:
+2. As with streamlit, switch to the PORTS tab and click on the link with port 3000 (🌐 icon). After loading Grafana use default credentials:
 - Login: "admin"
 - Password: "admin"
 
@@ -153,25 +153,21 @@ Anyway, with some models (like Llama3.2 it) I just didn't manage to get proper r
 
 After all, the purpose is to learn, not to get a perfect result. So I tested min_search and Elastic search.
 
-MinSearch:
-hit_rate 0.7722066133563864, MRR 0.661454506159499
+**MinSearch**:
+- hit_rate 0.7722066133563864, MRR 0.661454506159499
 
-ElasticSearch, text only
-hit_rate 0.5922865013774105, MRR 0.41999540863177215
+**ElasticSearch**:
+- text only: hit_rate 0.5922865013774105, MRR 0.41999540863177215
 
-ElasticSearch, vector_knn
-hit_rate 0.7052341597796143, MRR 0.5814508723599631
+- vector_knn: hit_rate 0.7052341597796143, MRR 0.5814508723599631
 
-ElasticSearch, text_vector_knn
-hit_rate 0.7245179063360881, MRR 0.6150367309458213
+- text_vector_knn: hit_rate 0.7245179063360881, MRR 0.6150367309458213
 
-ElasticSearch, question_text_vector_knn
-hit_rate 0.743801652892562, MRR 0.6330119375573918
+- question_text_vector_knn: hit_rate 0.743801652892562, MRR 0.6330119375573918
 
-ElasticSearch, vector_combined_knn
-hit_rate 0.7465564738292011, MRR 0.6352846648301189
+- vector_combined_knn: hit_rate 0.7465564738292011, MRR 0.6352846648301189
 
-I will continue experimenting with weights and boost.
+I will continue experimenting with weights and boosting.
 
 ## Best practices
  * [x] Hybrid search: combining both text and vector search (Elastic search, encoding)

@@ -148,13 +148,13 @@ Don't forget to remove downloaded images if you experimented with project locall
 
 Notebooks with text only and vector search retrieval evaluation are in [notebooks](/notebooks) directory.
 
-I decided to experiment with different Ollama models to create ground thuth data for data Engineering QnA. To be honest, the results are poor enough IMHO. I think partially it is because of QnA knowledge base is not so specific as with exam dataset, as interview recommendations are quite vague. 
-Anyway, with some models (like Llama3.2 it) I just didn't manage to get proper response in JSON parsable format. Surprisingly, Gemma 2 worked well enough with it. The results are in `ground-truth-data.csv` file. Questions are not very relevent to actually be a ground truth IMHO.
+I decided to experiment with different Ollama models to create ground truth data for data Engineering QnA. To be honest, the results are poor enough IMHO. I think partially it is because of QnA knowledge base is not so specific as with exam dataset, as interview recommendations are quite vague. 
+Anyway, with some models (like Llama3.2 it) I just didn't manage to get proper response in JSON parsable format. Surprisingly, Gemma 2 worked well enough with it. The results are in `ground-truth-data.csv` file. Generated questions are not very relevant to actually be a ground truth IMHO.
 
-After all, the purpose is to learn, not to get a perfect result. So I tested min_search and Elastic search.
+Nevertheless, the purpose is to learn, not to get a perfect result. So I tested min_search and Elastic search.
 
 **MinSearch**:
-- hit_rate 0.7722066133563864, MRR 0.661454506159499
+- hit_rate 0.772, MRR 0.661
 
 **ElasticSearch**:
 - text only: hit_rate 0.592, MRR 0.420

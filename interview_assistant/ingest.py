@@ -14,6 +14,8 @@ import minsearch
 
 load_dotenv()
 
+DEBUG = False
+
 USE_ELASTIC = os.getenv("USE_ELASTIC")
 ELASTIC_URL = os.getenv("ELASTIC_URL") # ELASTIC_URL_LOCAL
 INDEX_MODEL_NAME = os.getenv("INDEX_MODEL_NAME", "multi-qa-MiniLM-L6-cos-v1")
@@ -171,26 +173,28 @@ if __name__ == "__main__":
     if USE_ELASTIC: 
         es_client = init_elasticsearch()
 
-        # quick test
-        position = 'de'
-        query = 'What is Data Engineering?'
-        print('\nTest query:', query)
-        for search_type in ['Text', 'Vector']: 
-            if search_type == 'Vector':
-                index_model = load_model()
-                vector = index_model.encode(query)
-                search_results = elastic_search_knn('question_text_vector', vector, position)
-            else:
-                search_results = elastic_search_text(query, position)
-            print(search_type, len(search_results), search_results)    
+        if DEBUG:
+            # quick test
+            position = 'de'
+            query = 'What is Data Engineering?'
+            print('\nTest query:', query)
+            for search_type in ['Text', 'Vector']: 
+                if search_type == 'Vector':
+                    index_model = load_model()
+                    vector = index_model.encode(query)
+                    search_results = elastic_search_knn('question_text_vector', vector, position)
+                else:
+                    search_results = elastic_search_text(query, position)
+                print(search_type, len(search_results), search_results)    
     else:
         print("MinSearch: Ingesting data...")
         index = load_index(data_path=DATA_PATH)
         print(f' Indexed {len(index.docs)} document(s)')
 
-        # quick test
-        position = 'de'
-        query = 'What is Data Engineering?'
-        print('\nTest query:', query)
-        search_results = index.search(query, {'position': position}, num_results=3)
-        print(len(search_results), search_results)    
+        if DEBUG:
+            # quick test
+            position = 'de'
+            query = 'What is Data Engineering?'
+            print('\nTest query:', query)
+            search_results = index.search(query, {'position': position}, num_results=3)
+            print(len(search_results), search_results)    

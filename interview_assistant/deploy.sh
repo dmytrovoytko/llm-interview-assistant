@@ -24,6 +24,6 @@ docker compose build streamlit
 sleep 5
 
 echo
-echo '3. RUNNING DOCKER COMPOSE... streamlit app available on port 8501'
+echo '3. RUNNING DOCKER COMPOSE... streamlit app will be available on port 8501'
 echo
 docker compose up &

@@ -53,7 +53,7 @@ def main():
     # Model selection
     model_choice = col1.selectbox(
         "Select a model:",
-        ["ollama/phi3.5", "ollama/phi3", "openai/gpt-3.5-turbo", "openai/gpt-4o", "openai/gpt-4o-mini"],
+        ["ollama/phi3.5", "ollama/phi3", "ollama/qwen2.5:3b", "openai/gpt-3.5-turbo", "openai/gpt-4o", "openai/gpt-4o-mini"],
     )
     print_log(f"User selected model: {model_choice}")
 

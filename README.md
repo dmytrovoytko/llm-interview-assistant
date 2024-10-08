@@ -107,12 +107,14 @@ If you want to use other models, you can modify this script accordingly, then up
 2. Press 'Find the answer' button, wait for the response. For Ollama Phi3/qwen2.5 in CodeSpace response time was around a minute.
 ![streamlit Find the answer](/screenshots/streamlit-00.png)
 
-3. Check relevance evaluated by LLM.
+3. RAG evaluation: check relevance evaluated by LLM (default model to use for this is defined in `.env` file).
 ![streamlit check](/screenshots/streamlit-02.png)
 
 4. Give your feedback by pressing corresponding number of stars 🌟🌟🌟🌟🌟
 - 1-2 are negative
 - 4-5 are positive
+
+Both types of evaluation are stored in the database and can be monitored.
 
 5. App starts in wide mode by default. You can switch it off in streamlit settings (upper right corner).
 
@@ -141,13 +143,46 @@ You can monitor app performance in Grafana dashboard
 Run `docker compose down` in command line to stop all services.
 Don't forget to remove downloaded images if you experimented with project locally! Use `docker images` to list all images and `docker image rm ...` to remove those you don't need anymore.
 
-### Best practices
- * [x] Hybrid search: combining both text and vector search (Elastic search, encoding)
+## Retrieval evaluation
 
+Notebooks with text only and vector search retrieval evaluation are in [notebooks](/notebooks) directory.
+
+I decided to experiment with different Ollama models to create ground thuth data for data Engineering QnA. To be honest, the results are poor enough IMHO. I think partially it is because of QnA knowledge base is not so specific as with exam dataset, as interview recommendations are quite vague. 
+Anyway, with some models (like Llama3.2 it) I just didn't manage to get proper response in JSON parsable format. Surprisingly, Gemma 2 worked well enough with it. The results are in `ground-truth-data.csv` file. Questions are not very relevent to actually be a ground truth IMHO.
+
+After all, the purpose is to learn, not to get a perfect result. So I tested min_search and Elastic search.
+
+MinSearch:
+hit_rate 0.7722066133563864, MRR 0.661454506159499
+
+ElasticSearch, text only
+hit_rate 0.5922865013774105, MRR 0.41999540863177215
+
+ElasticSearch, vector_knn
+hit_rate 0.7052341597796143, MRR 0.5814508723599631
+
+ElasticSearch, text_vector_knn
+hit_rate 0.7245179063360881, MRR 0.6150367309458213
+
+ElasticSearch, question_text_vector_knn
+hit_rate 0.743801652892562, MRR 0.6330119375573918
+
+ElasticSearch, vector_combined_knn
+hit_rate 0.7465564738292011, MRR 0.6352846648301189
+
+I will continue experimenting with weights and boost.
+
+## Best practices
+ * [x] Hybrid search: combining both text and vector search (Elastic search, encoding)
+ * [x] User query rewriting 
 
 ## Next steps
 
-I plan to add more questions to knowledge database and test more models (Llama 3.2).
+I plan to 
+- add more questions to knowledge database
+- test more models (like Llama 3.2)
+- experiment with prompts
+- experiment with weights and boost to improve retrieval metrics
 
 Stay tuned!
 

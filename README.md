@@ -104,7 +104,7 @@ If you want to use other models, you can modify this script accordingly, then up
 ### :speech_balloon: Interact with the app
 
 1. Set query parameters - choose position, model, query parameters (search type, response length), enter your question.
-2. Press 'Find the answer' button, wait for response. For Ollama Phi3/qwen2.5 in CodeSpace response time was around a minute.
+2. Press 'Find the answer' button, wait for the response. For Ollama Phi3/qwen2.5 in CodeSpace response time was around a minute.
 ![streamlit Find the answer](/screenshots/streamlit-00.png)
 
 3. Check relevance evaluated by LLM.
@@ -139,7 +139,7 @@ You can monitor app performance in Grafana dashboard
 ### :stop_sign: Stop all containers
 
 Run `docker compose down` in command line to stop all services.
-Don't forget to remove downloaded images if you experimented with project locally! 
+Don't forget to remove downloaded images if you experimented with project locally! Use `docker images` to list all images and `docker image rm ...` to remove those you don't need anymore.
 
 ### Best practices
  * [x] Hybrid search: combining both text and vector search (Elastic search, encoding)
